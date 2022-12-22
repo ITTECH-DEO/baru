@@ -29,8 +29,11 @@ Route::get('/mobil', function () {
 });
 
 Route::get('/', [DashboardController::class, 'index']);
-Route::get('aboutUs', [AboutUsController::class, 'index'])->name('about');
-
+Route::get('aboutUs', [AboutUsController::class, 'indexWeb'])->name('about')->middleware('checkRole:admin');;
+Route::get('aboutUsAdm', [AboutUsController::class, 'indexAdm'])->name('about.adm')->middleware('checkRole:admin');;
+Route::get('/about_delete/{id}', [AboutUsController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+Route::post('/about_add', [AboutUsController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+Route::post('/about_update/{id}', [AboutUsController::class, 'update'])->middleware('checkRole:admin')->middleware('checkRole:admin');
 //web
 Route::get('homepage', [WebController::class, 'index']);
 Route::get('car_detail/{id}', [WebController::class, 'detailCar']);

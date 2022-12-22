@@ -45,6 +45,7 @@
                     </a></li>
                 </ul>
             </li>
+            <li class="{{ ( $act == 'return') ? 'active' : ''}}"><a href="{{route('about.adm')}}"><em class="fa fa-envelope">&nbsp;</em> About-Us</a></li>
             @elseif (Auth::user()->role == 'marketing')
             <li class="{{ ( $act == 'cars') ? 'active' : ''}}"><a href="{{url('cars')}}"><em class="fa fa-car">&nbsp;</em> Car </a></li>
             @endif

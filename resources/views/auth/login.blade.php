@@ -39,7 +39,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2>Car Dealer <em>Website</em></h2></a>
+          <a class="navbar-brand" href="{{url('/')}}"><h2 style="color: orange">KTT88 <em style="color: white">Cars</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -64,8 +64,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>Lorem ipsum dolor</h4>
-              <h2>Login</h2>
+              <h4>KTT88 CARS</h4>
+              <h2>LOGIN PAGE</h2>
             </div>
           </div>
         </div>
