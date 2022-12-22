@@ -16,6 +16,13 @@
     <script src="{{url('web/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{url('dashboard/js/jquery-1.8.3.min.js')}}"></script>
     <script src="{{url('dashboard/js/jquery.elevatezoom.js')}}"></script>
+    <script src="{{url('dashboard/js/google-map.js')}}"></script>
+    <script src="{{url('dashboard/js/jquery.min.js')}}"></script>
+    <script src="{{url('dashboard/js/main.js')}}"></script>
+    <script src="{{url('dashboard/js/popper.js')}}"></script>
+    <script src="{{url('dashboard/js/bootstrap.min.js')}}"></script>
+    <script src="{{url('dashboard/js/jquery.min.js')}}"></script>	
+    <script src="{{url('dashboard/js/validate.min.min.js')}}"></script>	 
 
     <!-- Additional Scripts -->
     <script src="{{url('web/assets/js/custom.js')}}"></script>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Whatsapp;
 use Illuminate\Http\Request;
 use Session;
 use Auth;
@@ -43,5 +44,11 @@ class HomeController extends Controller
         {
             return redirect('homepage');
         }
+    }
+
+    public function contact()
+    {
+        $whatsapp = whatsapp::orderBy('updated_at', 'DESC')->take(3)->get();
+        return view('web.contact',compact('whatsapp'));
     }
 }

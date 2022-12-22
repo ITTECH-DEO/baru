@@ -65,7 +65,7 @@ Route::post('/customer_update/{id}', [UserController::class, 'updateCustomer'])-
 
 //home
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 //vendors
 Route::get('/vendors', [VendorController::class, 'index'])->middleware('checkRole:admin');
 Route::get('/vendor_delete/{id}', [VendorController::class, 'delete'])->middleware('checkRole:admin');

@@ -60,7 +60,7 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{url('/')}}">Contact Us
+                  <a class="nav-link" href="{{url('/contact')}}">Contact Us
                     <span class="sr-only">(current)</span>
                   </a>
               </li>
