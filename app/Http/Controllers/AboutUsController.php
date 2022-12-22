@@ -36,7 +36,7 @@ class AboutUsController extends Controller
     public function indexWeb()
     {
         $about = About::orderBy('updated_at', 'DESC')->latest()->take(1)->get();
-        dd($about);
+        // dd($about);
         Session::put('menu','whatsapp');
         return view('web.aboutUs', compact('about'));
     }
