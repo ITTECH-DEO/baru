@@ -44,13 +44,23 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+              <li class="nav-item">
                     <a class="nav-link" href="{{url('/')}}">Home
                       <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{url('/')}}">Home
+                    <a class="nav-link" href="{{url('/mobil')}}">Mobil
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url('/')}}">About Us
+                    <span class="sr-only">(current)</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{url('/')}}">Contact Us
                     <span class="sr-only">(current)</span>
                   </a>
               </li>

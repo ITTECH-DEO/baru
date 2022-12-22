@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MarketingController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WhatsappController;
@@ -22,9 +23,11 @@ use App\Http\Controllers\WebController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/mobil', function () {
     return redirect('homepage');
 });
+
+Route::get('/', [DashboardController::class, 'index']);
 
 //web
 Route::get('homepage', [WebController::class, 'index']);
