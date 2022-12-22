@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
@@ -28,6 +29,7 @@ Route::get('/mobil', function () {
 });
 
 Route::get('/', [DashboardController::class, 'index']);
+Route::get('aboutUs', [AboutUsController::class, 'index'])->name('about');
 
 //web
 Route::get('homepage', [WebController::class, 'index']);

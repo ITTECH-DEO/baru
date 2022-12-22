@@ -38,7 +38,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2 style="color: white">Car Dealer <em style="color: green">Website</em></h2></a>
+          <a class="navbar-brand" href="{{url('/')}}"><h2 style="color: orange">KTT88 <em style="color: white">Cars</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -50,12 +50,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/mobil')}}">Mobil
+                    <a class="nav-link" href="{{url('/mobil')}}">Cars
                       <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{url('/')}}">About Us
+                  <a class="nav-link" href="{{url('aboutUs')}}">About Us
                     <span class="sr-only">(current)</span>
                   </a>
               </li>

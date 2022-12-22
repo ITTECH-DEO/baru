@@ -9,8 +9,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>WELCOME </h4>
-              <h2>SHOW ROOM CAR</h2>
+              <h4>KTT8 CARS</h4>
+              <h2>CAR PAGE</h2>
             </div>
           </div>
         </div>
