@@ -19,12 +19,14 @@
     <div class="container">
         <div class="col-md-12">
             <div class="row">
-               <div class="col-lg-6">
-                  sasa
-                </div><!-- /.col-lg-6 -->
+                @foreach ($about as $ab)
                 <div class="col-lg-6">
-                  sasa
-                </div><!-- /.col-lg-6 -->
+                    <p class="text-justify mr-3">{{$ab->about}}</p>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-lg-6">
+                    <img style="height: 400px; width: 400px " src="web/assets/images/heading-6-1920x500.jpg" alt="" id="myImg3" class="img-fluid wc-image zoom_01">
+                  </div><!-- /.col-lg-6 -->
+                @endforeach
             </div>
         </div>
     </div>
