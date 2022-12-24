@@ -24,6 +24,12 @@
            {{$message}}
         </div>
         @endif
+        @if($message=Session::get('error'))
+        <div class="alert bg-danger" role="alert">
+            <em class="fa fa-lg fa-times">&nbsp;</em> 
+           {{$message}}
+        </div>
+        @endif
                 <div class="panel panel-default">
                     <div class="panel-heading">
                          <p align="left"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Addabout">
@@ -47,8 +53,8 @@
                                 @foreach($about as $abt)
                                 <tr>
                                     <td>{{$no}}</td>
-                                    <td>{{$abt->about}}</td>
-                                    {{-- <td><img src="{{ url($abt->image) }}" alt=""></td> --}}
+                                    <td>{{Str::limit($abt->about, 20)}}</td>
+                                    <td><img src="{{ asset($abt->image) }}" style="width: 100px; height: 50px;" alt=""></td>
                                     <td>
                                                     <button 
                                                         class="btn btn-info btn-sm" 
@@ -87,11 +93,12 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-            <form role="form" action="{{url('about_add')}}" method="POST">
+            <form role="form" action="{{url('about_add')}}" method="POST" enctype="multipart/form-data">
                 @csrf
         <div class="form-group">
             <label>About</label>
-            <input class="form-control" name="about" placeholder="About">
+            {{-- <input class="form-control" name="about" placeholder="About"> --}}
+            <textarea name="about" cols="30" rows="10" placeholder="About" class="form-control"></textarea>
         </div>
         <div class="form-group">
             <label>Image</label>
@@ -125,9 +132,10 @@
             <form role="form" action="{{url('about_update/'.$abt->id)}}" method="POST">
                 @csrf
         <div class="form-group">
-            <label>Nama Cabang</label>
-            <input class="form-control" value="{{$abt->about}}"
-            name="about" placeholder="About">
+            <label>About</label>
+            {{-- <input class="form-control" value="{{$abt->about}}"
+            name="about" placeholder="About"> --}}
+            <textarea name="about" cols="30" rows="10" placeholder="About" class="form-control">{{ $abt->about }}</textarea>
         </div>
          <div class="form-group">
             <label>Image</label>
