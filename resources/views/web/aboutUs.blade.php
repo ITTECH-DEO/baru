@@ -24,7 +24,7 @@
                     <p class="text-justify mr-3">{{$ab->about}}</p>
                   </div><!-- /.col-lg-6 -->
                   <div class="col-lg-6">
-                    <img style="height: 400px; width: 400px " src="web/assets/images/heading-6-1920x500.jpg" alt="" id="myImg3" class="img-fluid wc-image zoom_01">
+                    <img style="height: 400px; width: 400px " src="{{$ab->image}}" alt="" id="myImg3" class="img-fluid wc-image zoom_01">
                   </div><!-- /.col-lg-6 -->
                 @endforeach
             </div>
