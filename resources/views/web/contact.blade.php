@@ -1,4 +1,5 @@
-@include('web.header')
+@include('web.headercontact')
+
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">

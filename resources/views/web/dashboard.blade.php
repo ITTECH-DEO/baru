@@ -1,8 +1,8 @@
-@include('web.header')
+@include('web.headerdashboard')
 
 
 <!-- Page Content -->
-<div class="page-heading about-heading header-text" style="background-image: url(<?php echo url('web/assets/images/heading-6-1920x500.jpg'); ?>);">
+<div class="mb-3 page-heading about-heading header-text" style="background-image: url(<?php echo url('web/assets/images/heading-6-1920x500.jpg'); ?>);">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -15,8 +15,8 @@
     </div>
 </div>
 
-<div class="products">
-    <div class="container">
+<div class="">
+    <div class="container ">
         <div class="col-md-12">
             <div class="row">
                 @php $modelT = new App\Models\User(); @endphp
@@ -24,7 +24,7 @@
                     @php $data = $modelT->cek_booked($car->id); @endphp
                     @if ($car->status_id == 1)
                         <div class="col-md-6">
-                            <div class="product-item">
+                            <div class="">
                                 <img class="zoom_01 round" style="width: 520px;height: 360px;" src="{{ $car->img_car }}"
                                     data-zoom-image="{{ $car->img_car }}" />
                                 {{-- <div class="down-content">

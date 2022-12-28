@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Whatsapp;
 use App\Models\About;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\DB;
@@ -11,10 +12,6 @@ use Illuminate\Support\Facades\Validator;
 
 class AboutUsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function uploadFile(Request $request, $oke)
     {
@@ -132,5 +129,11 @@ class AboutUsController extends Controller
         About::find($id)->delete();
         return redirect('aboutUsAdm')
             ->with('success', 'Data about successfully deleted!');
+    }
+
+    public function contact()
+    {
+        $whatsapp = whatsapp::orderBy('updated_at', 'DESC')->take(3)->get();
+        return view('web.contact',compact('whatsapp'));
     }
 }

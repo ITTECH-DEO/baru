@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Car Dealer | Car Page</title>
+    <title>Car Dealer | About Us Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url('web/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
