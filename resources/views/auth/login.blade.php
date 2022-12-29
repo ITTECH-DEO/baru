@@ -111,7 +111,7 @@
                     </fieldset>
                   </div>
 
-                  <div class="col-lg-12">
+                  <div class="col-lg-12 mb-3">
                     <fieldset>
                      <button  type="submit" class="btn btn-primary">Login</button>
                      OR
@@ -121,9 +121,11 @@
             
                     </fieldset>
                   </div>
-                   If forgot the password , you can contact administator by click this con wahtsapp &nbsp;
-                            <a target="_blank" href="https://wa.me/{{$fix2}}"> <i style="cursor: pointer;" class="fa fa-whatsapp"></i></a>
-                            <br>
+                  <div class="mt-3">
+                    If forgot the password , you can contact administator by click this con wahtsapp &nbsp;
+                             <a target="_blank" href="https://wa.me/{{$fix2}}"> <i style="cursor: pointer;" class="fa fa-whatsapp"></i></a>
+                             <br>
+                  </div>
                 </div>
               </form>
             </div>

@@ -292,7 +292,7 @@
                                data-target="#exampleModalR">
                                Book Now
                            </button>
-                           <a class="btn btn-primary" href="https://wa.me/{{$car->whatsapp->wa}}"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i></a>
+                           <a class="btn btn-primary" href="https://wa.me/62{{$car->whatsapp->wa}}"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i></a>
                        @endauth
                        </p>
                    </div>
