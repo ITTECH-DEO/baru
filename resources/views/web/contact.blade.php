@@ -61,7 +61,9 @@
                                     <span class="fa fa-phone"></span>
                                 </div>
                                 <div class="text">
-                                    <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                    @foreach ($admin as $adm )
+                                    <p><span>Phone:</span> <a href="https://wa.me/62{{$adm->phone_number}}">{{ $adm->phone_number }}</a></p>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -81,7 +83,7 @@
                                     <span class="fa fa-globe"></span>
                                 </div>
                                 <div class="text">
-                                    <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                                    <p><span>Website</span> <a href="kt88cars.com/homepage">kt88cars.com</a></p>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,5 @@
-@include('web.headerabout')
+@include('web.header')
+
 
 <!-- Page Content -->
 <div class="page-heading about-heading header-text" style="background-image: url(<?php echo url('web/assets/images/heading-6-1920x500.jpg'); ?>);">
@@ -19,13 +20,12 @@
         <div class="col-md-12">
             <div class="row">
                 @foreach ($about as $ab)
-                    <div class="col-lg-6" style="box-sizing: border-box;">
-                        <p style="position: absolute; width: 25%;" class="text-justify mr-3">{{ $ab->about }}</p>
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <img style="height: 400px; width: 400px " src="{{ $ab->image }}" alt=""
-                            id="myImg3" class="img-fluid wc-image zoom_01">
-                    </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <p class="text-justify mr-3">{{$ab->about}}</p>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-lg-6">
+                    <img style="height: 400px; width: 400px " src="{{$ab->image}}" alt="" id="myImg3" class="img-fluid wc-image zoom_01">
+                  </div><!-- /.col-lg-6 -->
                 @endforeach
             </div>
         </div>

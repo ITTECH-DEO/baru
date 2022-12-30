@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AboutUsWebController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
@@ -29,7 +30,7 @@ Route::get('/mobil', function () {
 });
 
 Route::get('/', [DashboardController::class, 'index']);
-Route::get('aboutUs', [AboutUsController::class, 'indexWeb'])->name('about');
+Route::get('aboutUs', [AboutUsWebController::class, 'indexWeb'])->name('about');
 Route::get('aboutUsAdm', [AboutUsController::class, 'indexAdm'])->name('about.adm')->middleware('checkRole:admin');;
 Route::get('/about_delete/{id}', [AboutUsController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
 Route::post('/about_add', [AboutUsController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
@@ -65,7 +66,7 @@ Route::post('/customer_update/{id}', [UserController::class, 'updateCustomer'])-
 
 //home
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/contact', [AboutUsController::class, 'contact'])->name('contact');
+Route::get('/contact', [AboutUsWebController::class, 'contact'])->name('contact');
 //vendors
 Route::get('/vendors', [VendorController::class, 'index'])->middleware('checkRole:admin');
 Route::get('/vendor_delete/{id}', [VendorController::class, 'delete'])->middleware('checkRole:admin');
