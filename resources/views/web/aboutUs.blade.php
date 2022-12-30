@@ -17,14 +17,19 @@
 
 <div class="products">
     <div class="container">
-        <div class="col-md-12">
-            <div class="row">
+        <div class="col-lg-12">
+            <div class="row ">
                 @foreach ($about as $ab)
-                <div class="col-lg-6">
-                    <p class="text-justify mr-3">{{$ab->about}}</p>
+                <div class="col-md-6">
+                    <div class="card" style="width: 33rem;">
+                        <div class="card-body">
+                          <p class="text-justify ">{{$ab->about}}</p>
+                        </div>
+                      </div>
+
                   </div><!-- /.col-lg-6 -->
-                  <div class="col-lg-6">
-                    <img style="height: 400px; width: 400px " src="{{$ab->image}}" alt="" id="myImg3" class="img-fluid wc-image zoom_01">
+                  <div class="col-md-6">
+                    <img style="height: 400px; width: 400px float-right" src="{{$ab->image}}" alt="" id="myImg3" class="img-fluid wc-image zoom_01">
                   </div><!-- /.col-lg-6 -->
                 @endforeach
             </div>
