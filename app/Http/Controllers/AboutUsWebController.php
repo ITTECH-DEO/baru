@@ -21,7 +21,7 @@ class AboutUsWebController extends Controller
     public function contact()
     {
         $whatsapp = Whatsapp::orderBy('updated_at', 'DESC')->take(3)->get();
-        $admin = User::where('role', 'admin')->latest()->get();
+        $admin = User::where('role', 'admin')->latest()->take(1)->get();
         // dd($admin);
         return view('web.contact',compact('whatsapp', 'admin'));
     }
