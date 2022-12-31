@@ -23,7 +23,7 @@
     <script src="{{url('dashboard/js/bootstrap.min.js')}}"></script>
     <script src="{{url('dashboard/js/jquery.min.js')}}"></script>	
     <script src="{{url('dashboard/js/validate.min.min.js')}}"></script>	 
-
+    @stack('dashboardfooter')
     <!-- Additional Scripts -->
     <script src="{{url('web/assets/js/custom.js')}}"></script>
     <script src="{{url('web/assets/js/owl.js')}}"></script>

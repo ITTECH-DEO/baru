@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{url('web/assets/css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{url('web/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{url('web/assets/css/owl.css')}}">
+    {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> --}}
 
   </head>
     <body>
