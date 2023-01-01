@@ -64,10 +64,26 @@ class CarController extends Controller
         $img_car2 = 'img_car2';
         $img_car3 = 'img_car3';
         $img_car4 = 'img_car4';
-        $img_car_lainnya = 'img_car_lainnya';
+        $img_car_lainnya1 = 'img_car_lainnya1';
         $img_car_lainnya2 = 'img_car_lainnya2';
         $img_car_lainnya3 = 'img_car_lainnya3';
         $img_car_lainnya4 = 'img_car_lainnya4';
+        $img_car_lainnya5 = 'img_car_lainnya5';
+        $img_car_lainnya6 = 'img_car_lainnya6';
+        $img_car_lainnya7 = 'img_car_lainnya7';
+        $img_car_lainnya8 = 'img_car_lainnya8';
+        $img_car_lainnya9 = 'img_car_lainnya9';
+        $img_car_lainnya10 = 'img_car_lainnya10';
+        $img_car_lainnya11 = 'img_car_lainnya11';
+        $img_car_lainnya12 = 'img_car_lainnya12';
+        $img_car_lainnya13 = 'img_car_lainnya13';
+        $img_car_lainnya14 = 'img_car_lainnya14';
+        $img_car_lainnya15 = 'img_car_lainnya15';
+        $img_car_lainnya16 = 'img_car_lainnya16';
+        $img_car_lainnya17 = 'img_car_lainnya17';
+        $img_car_lainnya18 = 'img_car_lainnya18';
+        $img_car_lainnya19 = 'img_car_lainnya19';
+        $img_car_lainnya20 = 'img_car_lainnya20';
 
         $car = new Car;
         $car->name_car = $request->name_car;
@@ -79,34 +95,56 @@ class CarController extends Controller
         $car->img_car2 = $this->uploadFile($request, $img_car2);
         $car->img_car3 = $this->uploadFile($request, $img_car3);
         $car->img_car4 = $this->uploadFile($request, $img_car4);
-        if ($request->hasFile('img_car_lainnya')) {
-            $file = $request->file('img_car_lainnya');
-            $ext = $file->getClientOriginalName();
-            $tmp_file_path = "admin/images/cars/";
-            $file->move('admin/images/cars', $ext);
-            $car->img_car_lainnya = $tmp_file_path.$ext;
-        }
-        if ($request->hasFile('img_car_lainnya2')) {
-            $file = $request->file('img_car_lainnya2');
-            $ext = $file->getClientOriginalName();
-            $tmp_file_path = "admin/images/cars/";
-            $file->move('admin/images/cars', $ext);
-            $car->img_car_lainnya2 = $tmp_file_path.$ext;
-        }
-        if ($request->hasFile('img_car_lainnya3')) {
-            $file = $request->file('img_car_lainnya3');
-            $ext = $file->getClientOriginalName();
-            $tmp_file_path = "admin/images/cars/";
-            $file->move('admin/images/cars', $ext);
-            $car->img_car_lainnya3 = $tmp_file_path.$ext;
-        }
-        if ($request->hasFile('img_car_lainnya4')) {
-            $file = $request->file('img_car_lainnya4');
-            $ext = $file->getClientOriginalName();
-            $tmp_file_path = "admin/images/cars/";
-            $file->move('admin/images/cars', $ext);
-            $car->img_car_lainnya4 = $tmp_file_path.$ext;
-        }
+
+        for ($i=1; $i <= 20 ; $i++) { 
+            if ($request->hasFile("img_car_lainnya$i")) {
+                $file = $request->file("img_car_lainnya$i");
+                $ext = $file->getClientOriginalName();
+                $tmp_file_path = "admin/images/cars/";
+                $file->move('admin/images/cars', $ext);
+                if ($i == 1) {
+                    $car->img_car_lainnya1 = $tmp_file_path.$ext;
+                } else if($i == 2) {
+                    $car->img_car_lainnya2 = $tmp_file_path.$ext;
+                } else if($i == 3){
+                    $car->img_car_lainnya3 = $tmp_file_path.$ext;
+                } else if($i == 4){
+                    $car->img_car_lainnya4 = $tmp_file_path.$ext;
+                } else if($i == 5){
+                    $car->img_car_lainnya5 = $tmp_file_path.$ext;
+                } else if($i == 6){
+                    $car->img_car_lainnya6 = $tmp_file_path.$ext;
+                } else if($i == 7){
+                    $car->img_car_lainnya7 = $tmp_file_path.$ext;
+                } else if($i == 8){
+                    $car->img_car_lainnya8 = $tmp_file_path.$ext;
+                } else if($i == 9){
+                    $car->img_car_lainnya9 = $tmp_file_path.$ext;
+                } else if($i == 10){
+                    $car->img_car_lainnya10 = $tmp_file_path.$ext;
+                } else if($i == 11){
+                    $car->img_car_lainnya11 = $tmp_file_path.$ext;
+                } else if($i == 12){
+                    $car->img_car_lainnya12 = $tmp_file_path.$ext;
+                } else if($i == 13){
+                    $car->img_car_lainnya13 = $tmp_file_path.$ext;
+                } else if($i == 14){
+                    $car->img_car_lainnya14 = $tmp_file_path.$ext;
+                } else if($i == 15){
+                    $car->img_car_lainnya15 = $tmp_file_path.$ext;
+                } else if($i == 16){
+                    $car->img_car_lainnya16 = $tmp_file_path.$ext;
+                } else if($i == 17){
+                    $car->img_car_lainnya17 = $tmp_file_path.$ext;
+                } else if($i == 18){
+                    $car->img_car_lainnya18 = $tmp_file_path.$ext;
+                } else if($i == 19){
+                    $car->img_car_lainnya19 = $tmp_file_path.$ext;
+                } else {
+                    $car->img_car_lainnya20 = $tmp_file_path.$ext;
+                }                
+            }  
+        }              
         $car->day_price = $request->day_price;
         $car->model = $request->model;
         $car->fisrt_registartion = $request->fisrt_registartion;

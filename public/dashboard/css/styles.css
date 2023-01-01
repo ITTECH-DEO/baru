@@ -25,6 +25,10 @@ h2 {
 h3, h4 {
   font-weight: 300; }
 
+.d-none {
+  display: none;
+}
+
 .large {
   font-size: 2em; }
 
