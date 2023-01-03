@@ -79,7 +79,7 @@
                                                 Detail
                                             </button>
                                             <button class="btn btn-secondary btn-sm">
-                                              <a href="{{ route('cetak.pdf', $car->id) }}">PDF</a>
+                                                <a href="{{ route('cetak.pdf', $car->id) }}">PDF</a>
                                             </button>
                                         </td>
                                     </tr>
@@ -237,110 +237,131 @@
                                             650px</small> </label>
                                     <input required type="file" class="form-control" name="img_car4">
                                 </div>
-                            </div>                        
+                            </div>
                             <hr>
                             <div class="row">
                                 <div class="col-md-12 d-none" id="img_car_lainnya1">
-                                    <label>Another Image 1 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 1 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya1">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya2">
-                                    <label>Another Image 2 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 2 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya2">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya3">
-                                    <label>Another Image 3 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 3 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya3">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya4">
-                                    <label>Another Image 4 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 4 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya4">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya5">
-                                    <label>Another Image 5 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 5 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya5">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya6">
-                                    <label>Another Image 6 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 6 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya6">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya7">
-                                    <label>Another Image 7 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 7 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya7">
-                                </div>                                
+                                </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya8">
-                                    <label>Another Image 8 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 8 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya8">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya9">
-                                    <label>Another Image 9 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 9 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya9">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya10">
-                                    <label>Another Image 10 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 10 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya10">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya11">
-                                    <label>Another Image 11 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 11 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya11">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya12">
-                                    <label>Another Image 12 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 12 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya12">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya13">
-                                    <label>Another Image 13 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 13 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya13">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya14">
-                                    <label>Another Image 14 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 14 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya14">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya15">
-                                    <label>Another Image 15 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 15 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya15">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya16">
-                                    <label>Another Image 16 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 16 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya16">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya17">
-                                    <label>Another Image 17 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 17 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya17">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya18">
-                                    <label>Another Image 18 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 18 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya18">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya19">
-                                    <label>Another Image 19 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 19 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya19">
                                 </div>
                                 <div class="col-md-12 d-none" id="img_car_lainnya20">
-                                    <label>Another Image 20 <small style="color: red"><br> Recomended size height 366px width
+                                    <label>Another Image 20 <small style="color: red"><br> Recomended size height 366px
+                                            width
                                             650px</small> </label>
                                     <input type="file" class="form-control" name="img_car_lainnya20">
                                 </div>
-                                <div class="col-md-12 align-self-center text-center" style="margin: 40px 0px;" id="buttonAdd">
+                                <div class="col-md-12 align-self-center text-center" style="margin: 40px 0px;"
+                                    id="buttonAdd">
                                     <span class="btn btn-warning" onclick="myFunction()">Tambah Gambar</span>
                                 </div>
                             </div>
@@ -525,7 +546,8 @@
                                         <img src="{{ $car->img_car3 }}" style="width: 30%">
                                     </div>
                                     <div class="col-md-3">
-                                        <label>Image Of Millage <small style="color: red">Recomended size height 366px width
+                                        <label>Image Of Millage <small style="color: red">Recomended size height 366px
+                                                width
                                                 650px</small></label>
                                         <input type="file" class="form-control" name="img_car4">
                                         <input type="hidden" name="old_img_car4" value="{{ $car->img_car4 }}">
@@ -540,7 +562,8 @@
                                         <label>Another Image <small style="color: red">Recomended size height 366px width
                                                 650px</small></label>
                                         <input type="file" class="form-control" name="img_car_lainnya">
-                                        <input type="hidden" name="old_img_car_lainnya" value="{{ $car->img_car_lainnya }}">
+                                        <input type="hidden" name="old_img_car_lainnya"
+                                            value="{{ $car->img_car_lainnya }}">
 
                                         <label>If Have Been Change Imgae , click update For see update item!</label>
                                         <img src="{{ $car->img_car_lainnya }}" style="width: 30%">
@@ -549,7 +572,8 @@
                                         <label>Another Image <small style="color: red">Recomended size height 366px width
                                                 650px</small></label>
                                         <input type="file" class="form-control" name="img_car_lainnya2">
-                                        <input type="hidden" name="old_img_car_lainnya2" value="{{ $car->img_car_lainnya2 }}">
+                                        <input type="hidden" name="old_img_car_lainnya2"
+                                            value="{{ $car->img_car_lainnya2 }}">
 
                                         <label>If Have Been Change Imgae , click update For see update item!</label>
                                         <img src="{{ $car->img_car_lainnya2 }}" style="width: 30%">
@@ -558,7 +582,8 @@
                                         <label>Another Image<small style="color: red">Recomended size height 366px width
                                                 650px</small></label>
                                         <input type="file" class="form-control" name="img_car_lainnya3">
-                                        <input type="hidden" name="old_img_car_lainnya3" value="{{ $car->img_car_lainnya3 }}">
+                                        <input type="hidden" name="old_img_car_lainnya3"
+                                            value="{{ $car->img_car_lainnya3 }}">
 
                                         <label>If Have Been Change Imgae , click update For see update item!</label>
                                         <img src="{{ $car->img_car_lainnya3 }}" style="width: 30%">
@@ -567,7 +592,8 @@
                                         <label>Another Image <small style="color: red">Recomended size height 366px width
                                                 650px</small></label>
                                         <input type="file" class="form-control" name="img_car_lainnya4">
-                                        <input type="hidden" name="old_img_car_lainnya4" value="{{ $car->img_car_lainnya4 }}">
+                                        <input type="hidden" name="old_img_car_lainnya4"
+                                            value="{{ $car->img_car_lainnya4 }}">
 
                                         <label>If Have Been Change Imgae , click update For see update item!</label>
                                         <img src="{{ $car->img_car_lainnya4 }}" style="width: 30%">
@@ -602,19 +628,20 @@
                                         <img src="{{ $car->img_car3 }}" alt=""
                                             style="height: 150px;width: 100%">
                                     </div>
-                                    <div class="col-xs-3" >
+                                    <div class="col-xs-3">
                                         {{-- {{ $car->img_car2 }} --}}
-                                        <img src="{{ $car->img_car2 }}" alt=""
-                                            style="height: 150px;width: 100%" style="display:none ;" >
+                                        <img src="{{ $car->img_car2 }}" alt="" style="height: 150px;width: 100%"
+                                            style="display:none ;">
                                     </div>
-                                    <div class="col-xs-3" >
-                                        <img src="{{ $car->img_car }}" alt="" style="height: 150px;width: 100%" style="display:none ;" >
+                                    <div class="col-xs-3">
+                                        <img src="{{ $car->img_car }}" alt="" style="height: 150px;width: 100%"
+                                            style="display:none ;">
                                         {{-- {{ $car->img_car }} --}}
                                     </div>
                                 </div>
                                 <div class="row" style="margin-bottom: 20px">
-                                    <div class="col-xs-9" >
-                                        <img src="{{ $car->img_car }}" alt="" style="height: 300px;width: 100%"  >
+                                    <div class="col-xs-9">
+                                        <img src="{{ $car->img_car }}" alt="" style="height: 300px;width: 100%">
                                     </div>
                                 </div>
                                 {{-- <button type="button" id="btn1">Show More Image</button> --}}
@@ -718,7 +745,9 @@
                                                     <div class="clearfix">
                                                         <span class="pull-left">WhatsApp Number</span>
 
-                                                        <strong class="pull-right">{{ strtoupper($car->whatsapp->nama_cabang) }} : {{ strtoupper($car->whatsapp->wa) }}</strong>
+                                                        <strong
+                                                            class="pull-right">{{ strtoupper($car->whatsapp->nama_cabang) }}
+                                                            : {{ strtoupper($car->whatsapp->wa) }}</strong>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -759,78 +788,79 @@
                     </div>
                 </div>
             </div>
-            <script type="text/javascript">
-                let no = 0;
-                function myFunction() {                    
-                    no++;
-                    const img1 = document.getElementById("img_car_lainnya1");
-                    const img2 = document.getElementById("img_car_lainnya2");
-                    const img3 = document.getElementById("img_car_lainnya3");
-                    const img4 = document.getElementById("img_car_lainnya4");
-                    const img5 = document.getElementById("img_car_lainnya5");
-                    const img6 = document.getElementById("img_car_lainnya6");
-                    const img7 = document.getElementById("img_car_lainnya7");
-                    const img8 = document.getElementById("img_car_lainnya8");
-                    const img9 = document.getElementById("img_car_lainnya9");
-                    const img10 = document.getElementById("img_car_lainnya10");
-                    const img11 = document.getElementById("img_car_lainnya11");
-                    const img12 = document.getElementById("img_car_lainnya12");
-                    const img13 = document.getElementById("img_car_lainnya13");
-                    const img14 = document.getElementById("img_car_lainnya14");
-                    const img15 = document.getElementById("img_car_lainnya15");
-                    const img16 = document.getElementById("img_car_lainnya16");
-                    const img17 = document.getElementById("img_car_lainnya17");
-                    const img18 = document.getElementById("img_car_lainnya18");
-                    const img19 = document.getElementById("img_car_lainnya19");
-                    const img20 = document.getElementById("img_car_lainnya20");
-                    const buttonAdd = document.getElementById("buttonAdd");
-
-                    if (no == 1) {                        
-                        img1.classList.remove("d-none");
-                    } else if(no == 2){
-                        img2.classList.remove("d-none");
-                    } else if(no == 3){
-                        img3.classList.remove("d-none");
-                    } else if(no == 4){
-                        img4.classList.remove("d-none");
-                    } else if(no == 5){
-                        img5.classList.remove("d-none");
-                    } else if(no == 6){
-                        img6.classList.remove("d-none");
-                    } else if(no == 7){
-                        img7.classList.remove("d-none");
-                    } else if(no == 8){
-                        img8.classList.remove("d-none");
-                    } else if(no == 9){
-                        img9.classList.remove("d-none");
-                    } else if(no == 10){
-                        img10.classList.remove("d-none");
-                    } else if(no == 11){
-                        img11.classList.remove("d-none");
-                    } else if(no == 12){
-                        img12.classList.remove("d-none");
-                    } else if(no == 13){
-                        img13.classList.remove("d-none");
-                    } else if(no == 14){
-                        img14.classList.remove("d-none");
-                    } else if(no == 15){
-                        img15.classList.remove("d-none");
-                    } else if(no == 16){
-                        img16.classList.remove("d-none");
-                    } else if(no == 17){
-                        img17.classList.remove("d-none");
-                    } else if(no == 18){
-                        img18.classList.remove("d-none");
-                    } else if(no == 19){
-                        img19.classList.remove("d-none");
-                    } else if(no == 20){
-                        img20.classList.remove("d-none");
-                        buttonAdd.classList.add("d-none");                        
-                    }
-                     else {
-                        console.log('Another image is false');
-                    }                    
-                }
-            </script>
         @endforeach
-    @endsection
+    </div>
+    <script type="text/javascript">
+        let no = 0;
+
+        function myFunction() {
+            no++;
+            const img1 = document.getElementById("img_car_lainnya1");
+            const img2 = document.getElementById("img_car_lainnya2");
+            const img3 = document.getElementById("img_car_lainnya3");
+            const img4 = document.getElementById("img_car_lainnya4");
+            const img5 = document.getElementById("img_car_lainnya5");
+            const img6 = document.getElementById("img_car_lainnya6");
+            const img7 = document.getElementById("img_car_lainnya7");
+            const img8 = document.getElementById("img_car_lainnya8");
+            const img9 = document.getElementById("img_car_lainnya9");
+            const img10 = document.getElementById("img_car_lainnya10");
+            const img11 = document.getElementById("img_car_lainnya11");
+            const img12 = document.getElementById("img_car_lainnya12");
+            const img13 = document.getElementById("img_car_lainnya13");
+            const img14 = document.getElementById("img_car_lainnya14");
+            const img15 = document.getElementById("img_car_lainnya15");
+            const img16 = document.getElementById("img_car_lainnya16");
+            const img17 = document.getElementById("img_car_lainnya17");
+            const img18 = document.getElementById("img_car_lainnya18");
+            const img19 = document.getElementById("img_car_lainnya19");
+            const img20 = document.getElementById("img_car_lainnya20");
+            const buttonAdd = document.getElementById("buttonAdd");
+
+            if (no == 1) {
+                img1.classList.remove("d-none");
+            } else if (no == 2) {
+                img2.classList.remove("d-none");
+            } else if (no == 3) {
+                img3.classList.remove("d-none");
+            } else if (no == 4) {
+                img4.classList.remove("d-none");
+            } else if (no == 5) {
+                img5.classList.remove("d-none");
+            } else if (no == 6) {
+                img6.classList.remove("d-none");
+            } else if (no == 7) {
+                img7.classList.remove("d-none");
+            } else if (no == 8) {
+                img8.classList.remove("d-none");
+            } else if (no == 9) {
+                img9.classList.remove("d-none");
+            } else if (no == 10) {
+                img10.classList.remove("d-none");
+            } else if (no == 11) {
+                img11.classList.remove("d-none");
+            } else if (no == 12) {
+                img12.classList.remove("d-none");
+            } else if (no == 13) {
+                img13.classList.remove("d-none");
+            } else if (no == 14) {
+                img14.classList.remove("d-none");
+            } else if (no == 15) {
+                img15.classList.remove("d-none");
+            } else if (no == 16) {
+                img16.classList.remove("d-none");
+            } else if (no == 17) {
+                img17.classList.remove("d-none");
+            } else if (no == 18) {
+                img18.classList.remove("d-none");
+            } else if (no == 19) {
+                img19.classList.remove("d-none");
+            } else if (no == 20) {
+                img20.classList.remove("d-none");
+                buttonAdd.classList.add("d-none");
+            } else {
+                console.log('Another image is false');
+            }
+        }
+    </script>
+@endsection
