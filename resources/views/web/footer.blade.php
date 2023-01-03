@@ -16,13 +16,13 @@
     <script src="{{url('web/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{url('dashboard/js/jquery-1.8.3.min.js')}}"></script>
     <script src="{{url('dashboard/js/jquery.elevatezoom.js')}}"></script>
-    <script src="{{url('dashboard/js/google-map.js')}}"></script>
-    <script src="{{url('dashboard/js/jquery.min.js')}}"></script>
-    <script src="{{url('dashboard/js/main.js')}}"></script>
-    <script src="{{url('dashboard/js/popper.js')}}"></script>
-    <script src="{{url('dashboard/js/bootstrap.min.js')}}"></script>
-    <script src="{{url('dashboard/js/jquery.min.js')}}"></script>
-    <script src="{{url('dashboard/js/validate.min.min.js')}}"></script>
+    {{-- <script src="{{url('dashboard/js/google-map.js')}}"></script> --}}
+    {{-- <script src="{{url('dashboard/js/jquery.min.js')}}"></script> --}}
+    {{-- <script src="{{url('dashboard/js/main.js')}}"></script> --}}
+    {{-- <script src="{{url('dashboard/js/popper.js')}}"></script> --}}
+    {{-- <script src="{{url('dashboard/js/bootstrap.min.js')}}"></script> --}}
+    {{-- <script src="{{url('dashboard/js/jquery.min.js')}}"></script> --}}
+    {{-- <script src="{{url('dashboard/js/validate.min.js')}}"></script> --}}
  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>--}}
     @stack('dashboardfooter')
