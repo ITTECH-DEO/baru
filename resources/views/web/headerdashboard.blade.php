@@ -16,6 +16,11 @@
     <!-- Bootstrap core CSS -->
     <link href="{{url('web/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
+      <!-- Link rell slick -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{url('web/assets/css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{url('web/assets/css/style.css')}}">
@@ -32,7 +37,7 @@
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
@@ -79,3 +84,5 @@
         </div>
       </nav>
     </header>
+</body>
+</html>

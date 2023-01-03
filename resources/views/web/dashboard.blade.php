@@ -1,161 +1,154 @@
 @include('web.headerdashboard')
-<div class="page-heading2 about-heading header-text">
-  <h2>Automatic Slideshow</h2>
-  <p>Change image every 2 seconds:</p>
-  
-  <div class="slideshow-container">
-  
-  <div class="mySlides fade">
-    <img src="web/assets/images/mobil3.jpg" style="width: 1349px;height: 455px;">
-    <div class="hero">
-      <hgroup>
-          <h1>KTT8 CARS</h1>        
-      </hgroup>
-    </div>
-  </div>
-  
-  <div class="mySlides fade">
-    <img src="web/assets/images/mobil2.jpg" style="width: 1349px;height: 455px;">
-    <div class="hero">
-      <hgroup>
-          <h1>KTT8 CARS</h1>        
-      </hgroup>
-    </div>
-  </div>
-  
-  <div class="mySlides fade">
-    <img src="web/assets/images/mobil4.jpg" style="width: 1349px;height: 455px;">
-    <div class="hero">
-      <hgroup>
-          <h1>KTT8 CARS</h1>        
-      </hgroup>
-    </div>
-  </div>
-  
-  </div>
-  <br>
-  
-  <div style="text-align:center">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-  </div>
-</div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img style="height: 90vh" class="d-block w-100" src="web/assets/images/mobil3.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" style="height: 90vh" src="web/assets/images/mobil2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" style="height: 90vh" src="web/assets/images/mobil4.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+
+
+
 
 
 <!-- Page Content -->
-<br><br><br><br>
-<div class="">
-    <div class="container ">
-        <div class="col-md-12">
-            <div class="row">
-                @php $modelT = new App\Models\User(); @endphp
-                @foreach ($cars as $car)
-                    @php $data = $modelT->cek_booked($car->id); @endphp
-                    @if ($car->status_id == 1)
-                        <div class="card round">
-                            <img class="zoom_01 round" style="width: 520px;height: 360px;" src="{{ $car->img_car }}"
-                                data-zoom-image="{{ $car->img_car }}" />
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6 pull-left">
-                                        <b>Nama Mobil:</b><br>
-                                        <b>Type Mobil:</b><br>
-                                        <b>Vendor Mobil:</b>
-                                    </div>
-                                    <div class="col-md-6 pull-right">
-                                        <b>{{ $car->name_car }}</b><br>
-                                        <b>{{ $car->type_car }}</b><br>
-                                        <b>{{ $car->vendor->name_vendor }}</b>
-                                    </div>
-                                </div>
+<div class="container-fluid m-3"></div>
+    <div class="owl-carousel owl-theme row">
+        @php $modelT = new App\Models\User(); @endphp
+        @foreach ($cars as $car)
+            @php $data = $modelT->cek_booked($car->id); @endphp
+            @if ($car->status_id == 1)
+                <div class="item">
+                    <div class="card ">
+                        <img class="zoom_01" src="{{ $car->img_car }}" style="height: 100%; width: 100%" data-zoom-image="{{ $car->img_car }}" />
+                        <div class="card-body">
+
+                            <div class="pull-left">
+                                <p>Nama : </p> <b>{{ $car->name_car }}</b>
+                                <p>Type Mobil:</p> <b>{{ $car->type_car }}</b>
+                                <p>Vendor Mobil:</p> <b>{{ $car->vendor->name_vendor }}</b>
                             </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="pull-left col-md-6">
-                                        <b>RP. {{ $car->day_price }}</b>
-                                    </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="pull-left col-md-6">
+                                    @php
+                                        $hasil_rupiah = number_format($car->day_price,2,',','.');
+                                    @endphp
+                                    Rp.{{ $hasil_rupiah }}
                                 </div>
                             </div>
                         </div>
-            </div>
-        @else
-            @endif
-            @endforeach
-            {{-- <div class="col-md-12">
-                <ul class="pages">
-                 {{$cars->links()}}
-                </ul>
-              </div> --}}
-        </div>
-    </div>
-</div>
-</div>
-</div>
-{{-- <div class="modal fade" id="Booked" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">This car have been booked</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="contact-form">
-                    <p>This car have been booked , and wil bee ready again if the booked before not pay the invoice !
-                    </p>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+
+
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
-{{-- <div class="modal fade" id="Sold" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">This car have been sold</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="contact-form">
-             <p>This car have been sold</p>
-          <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-          </div>
-        </div>
-      </div>
-    </div>
+            @else
+            @endif
+        @endforeach
+{{--    <h2>Pilihlah Mobil</h2>--}}
+{{--     <section class="customer-logos slider">--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/1.jpg">--}}
+{{--        </div>--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/5.jpg">--}}
+{{--        </div>--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/3.jpg">--}}
+{{--        </div>--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/4.jpg">--}}
+{{--        </div>--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/2.jpg">--}}
+{{--        </div>--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/6.jpg">--}}
+{{--        </div>--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/7.jpg">--}}
+{{--        </div>--}}
+{{--        <div class="slide">--}}
+{{--          <img src="images/8.jpg">--}}
+{{--        </div>--}}
+{{--     </section>--}}
   </div>
-</div> --}}
-@push('dashboardfooter')
-<script>
-  let slideIndex = 0;
-  showSlides();
-  
-  function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 3000); // Change image every 2 seconds
-  }
-  </script>
-@endpush
+
 @include('web.footer')
+<script >
+    $('.owl-carousel').owlCarousel({
+        margin:50,
+        loop:true,
+        responsiveClass:true,
+        // responsive:{
+        //     0:{
+        //         items:1,
+        //         nav:true
+        //     },
+        //     600:{
+        //         items:3,
+        //         nav:false
+        //     },
+        //     1000:{
+        //         items:5,
+        //         nav:true,
+        //         loop:false
+        //     }
+        // }
+    })
+    $('.owl-carousel').on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY>0) {
+            owl.trigger('next.owl');
+        } else {
+            owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
+</script>
+{{--@push('web.footer')--}}
+{{--<script>--}}
+{{--    $(document).ready(function () {--}}
+{{--        $(".customer-logos").slick({--}}
+{{--            slidesToShow: 6,--}}
+{{--            slidesToScroll: 1,--}}
+{{--            autoplay: true,--}}
+{{--            autoplaySpeed: 1500,--}}
+{{--            arrows: false,--}}
+{{--            dots: false,--}}
+{{--            pauseOnHover: false,--}}
+{{--            responsive: [--}}
+{{--                {--}}
+{{--                    breakpoint: 768,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 4--}}
+{{--                    }--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    breakpoint: 520,--}}
+{{--                    settings: {--}}
+{{--                        slidesToShow: 3--}}
+{{--                    }--}}
+{{--                }--}}
+{{--            ]--}}
+{{--        });--}}
+{{--    });--}}
+{{--</script>--}}
+{{--@endpush--}}
+

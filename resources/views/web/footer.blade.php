@@ -21,8 +21,10 @@
     <script src="{{url('dashboard/js/main.js')}}"></script>
     <script src="{{url('dashboard/js/popper.js')}}"></script>
     <script src="{{url('dashboard/js/bootstrap.min.js')}}"></script>
-    <script src="{{url('dashboard/js/jquery.min.js')}}"></script>	
-    <script src="{{url('dashboard/js/validate.min.min.js')}}"></script>	 
+    <script src="{{url('dashboard/js/jquery.min.js')}}"></script>
+    <script src="{{url('dashboard/js/validate.min.min.js')}}"></script>
+ <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>--}}
     @stack('dashboardfooter')
     <!-- Additional Scripts -->
     <script src="{{url('web/assets/js/custom.js')}}"></script>
@@ -32,7 +34,7 @@
       {
           $('#muter_beh').show();
           $('#submit_form').hide();
-          setTimeout(function() { 
+          setTimeout(function() {
            window.location.href= "{{url('/')}}";
         }, 7000);
       }
@@ -47,7 +49,7 @@
    $('#myImg').toggle('slow');
    $('#myImg2').toggle('slow');
    $('#myImg3').toggle('slow');
-   
+
   });
 });
       </script>
