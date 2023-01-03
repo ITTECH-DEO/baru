@@ -23,7 +23,8 @@
 <!-- Page Content -->
 <div class="container-fluid m-5">
     <div class="owl-carousel owl-theme">
-       $cars->count())
+        @php
+           var_dump($cars->count())
         @endphp
     @foreach ($cars as $car)
         @if ($car->status_id == 1)
