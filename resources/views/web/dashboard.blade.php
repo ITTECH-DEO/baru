@@ -23,27 +23,24 @@
 <!-- Page Content -->
 <div class="container-fluid m-5">
     <div class="owl-carousel owl-theme">
-        @php
-           var_dump($cars->count())
-        @endphp
-    @foreach ($cars as $car)
-        @if ($car->status_id == 1)
-            <div class="card item" style="max-width: 200px;">
-                <img src="{{ $car->img_car }}" style="height: 100%; width: 100%" />
-                <div class="card-body">
+        @foreach ($cars as $car)
+            @if ($car->status_id == 1)
+                <div class="card item" style="max-width: 200px;">
+                    <img src="{{ $car->img_car }}" style="height: 100%; width: 100%" />
+                    <div class="card-body">
 
-                    <div class="pull-left">
-                        <p>Nama : </p> <b>{{ $car->name_car }}</b>
-                        <p>Type Mobil:</p> <b>{{ $car->type_car }}</b>
-                        <p>Vendor Mobil:</p> <b>{{ $car->vendor->name_vendor }}</b>
+                        <div class="pull-left">
+                            <p>Nama : </p> <b>{{ $car->name_car }}</b>
+                            <p>Type Mobil:</p> <b>{{ $car->type_car }}</b>
+                            <p>Vendor Mobil:</p> <b>{{ $car->vendor->name_vendor }}</b>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @else
-        @endif
-    @endforeach
+            @else
+            @endif
+        @endforeach
 
-</div>
+    </div>
 </div>
 
 @include('web.footer')
