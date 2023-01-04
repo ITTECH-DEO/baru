@@ -22,6 +22,10 @@
 </div>
 <!-- Page Content -->
 <div class="container-fluid m-5">
+<h2 style="padding: 20px 20px 30px; margin-top: 2px; text-align: center; position: 
+relative;"><span style="color:#FFA500!important">Rekomendasi</span> <span 
+style="color:#000000!important">Mobil</span></h2>
+    <br/>
     <div class="owl-carousel owl-theme">
         @foreach ($cars as $car)
             @if ($car->status_id == 1)
