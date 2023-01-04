@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="{{url('web/assets/css/style1.css')}}">
   </head>
 
- 
+
   <footer class="footer-09">
 			<div class="container">
 				<div class="row">
@@ -108,12 +108,12 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="{{url('web/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{url('web/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{url('dashboard/js/jquery-1.8.3.min.js')}}"></script>
+    {{-- <script src="{{url('dashboard/js/jquery-1.8.3.min.js')}}"></script> --}}
     <script src="{{url('dashboard/js/jquery.elevatezoom.js')}}"></script>
     <!-- <script src="{{url('web/assets/js/jquery.min.js')}}"></script> -->
     <script src="{{url('web/assets/js/popper.js')}}"></script>
     <script src="{{url('web/assets/js/bootstrap.min.js')}}"></script>
+    {{-- <script src="{{url('web/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script> --}}
     <script src="{{url('web/assets/js/main1.js')}}"></script>
     {{-- <script src="{{url('dashboard/js/google-map.js')}}"></script> --}}
     {{-- <script src="{{url('dashboard/js/jquery.min.js')}}"></script> --}}
@@ -129,7 +129,7 @@
     <script src="{{url('web/assets/js/custom.js')}}"></script>
     <script src="{{url('web/assets/js/owl.js')}}"></script>
     <script type="text/javascript">
-      
+
       function submitForm()
       {
           $('#muter_beh').show();
