@@ -8254,12 +8254,12 @@ footer {
   background: -webkit-linear-gradient(45deg, #2a1a5e 0%, #5126a7 100%);
   background: -o-linear-gradient(45deg, #2a1a5e 0%, #5126a7 100%);
   background: -ms-linear-gradient(45deg, #2a1a5e 0%, #5126a7 100%);
-  background: linear-gradient(45deg, #2a1a5e 0%, #5126a7 100%);
+  background: linear-gradient(45deg, #F36523 0%, #B26E01 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a1a5e', endColorstr='#5126a7', GradientType=1 ); }
   .footer-09 .border-top {
     border-color: rgba(255, 255, 255, 0.1) !important; }
   .footer-09 a {
-    color: #fe59d7; }
+    color: #EFB38C; }
     .footer-09 a:hover {
       color: rgba(255, 255, 255, 0.9); }
   .footer-09 p {
@@ -8274,12 +8274,11 @@ footer {
       border-radius: 50%;
       height: 40px;
       display: block;
-      color: #fe59d7;
-      border: 1px solid #fe59d7; }
+      color: #ffff; }
   .footer-09 ul.list-unstyled li a {
-    color: rgba(255, 255, 255, 0.5); }
+    color: #fff }
   .footer-09 .block-21 .heading a {
-    color: rgba(255, 255, 255, 0.5); }
+    color: #ffff; }
   .footer-09 .block-21 .meta div a {
     color: rgba(255, 255, 255, 0.3); }
   .footer-09 .block-23 ul li {
@@ -8290,7 +8289,7 @@ footer {
     border-radius: 0; }
     .footer-09 .subscribe-form .form-group input {
       background: rgba(0, 0, 0, 0.05) !important;
-      border: 2px solid #fe8ce3 !important;
+      border: 2px solid #ffa500 !important;
       outline: none !important;
       color: rgba(255, 255, 255, 0.3) !important;
       font-size: 16px;
@@ -8317,7 +8316,7 @@ footer {
       width: 52px;
       height: 52px;
       font-size: 16px;
-      background: #fe8ce3 !important;
+      background: #ffa500 !important;
       border: none;
       border-radius: 0; }
       .footer-09 .subscribe-form .form-group .submit:hover, .footer-09 .subscribe-form .form-group .submit:focus {

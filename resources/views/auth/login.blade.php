@@ -24,7 +24,7 @@
   </head>
 
   <body>
-
+  
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -39,18 +39,41 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2 style="color: orange">KTT88 <em style="color: white">Cars</em></h2></a>
+          <a class="navbar-brand" href="{{url('/')}}"><h2 style="color: orange">KT88 <em style="color: white">Cars</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+              <li class="nav-item">
                     <a class="nav-link" href="{{url('/')}}">Home
                       <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item active"><a class="nav-link" href="{{url('login')}}">Login</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('/mobil')}}">Cars
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url('aboutUs')}}">About Us
+                    <span class="sr-only">(current)</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{url('/contact')}}">Contact Us
+                    <span class="sr-only">(current)</span>
+                  </a>
+              </li>
+                @auth
+                 <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Logout</a>
+                     <form id="logout-form" action="{{ url('log_out_customer') }}"
+                      method="POST" style="display: none;">@csrf </form></li>
+                @endauth
+                @guest
+                <li class="nav-item"><a class="nav-link" href="{{url('login')}}">Login</a></li>
+                @endguest
             </ul>
           </div>
         </div>
@@ -124,7 +147,7 @@
                   <div class="mt-3">
                     If forgot the password , you can contact administator by click this con wahtsapp &nbsp;
                              <a target="_blank" href="https://wa.me/{{$fix2}}"> <i style="cursor: pointer;" class="fa fa-whatsapp"></i></a>
-                             <br>
+<br>
                   </div>
                 </div>
               </form>
@@ -196,18 +219,8 @@
       </div>
     </div>
   </div>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>Copyright © 2020 Company Name - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+  <br>
+  @include('web.footer')
 
     <!-- Bootstrap core JavaScript -->
     <!-- Bootstrap core JavaScript -->

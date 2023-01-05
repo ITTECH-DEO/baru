@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">Contact Form #06</h2>
+                <h2 class="heading-section">Contact Us</h2>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 d-flex align-items-stretch mt-5">
-                            <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2"
+                            <iframe src="https://maps.google.com/maps?q=Blk.%20F,%20Jl.%20Boulevard%20Bintaro%20Jaya%20Blok%20F,%20Pd.%20Jaya,%20Kec.%20Pd.%20Aren,%20Kota%20Tangerang%20Selatan,%20Banten%2015220&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2"
                                   style="border:2" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                                     <span class="fa fa-map-marker"></span>
                                 </div>
                                 <div class="text">
-                                    <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                                    <p><span>Address:</span> Jl. Pd. Jaya, Pondok Jaya, South Tangerang City, Banten, Indonesia</p>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                     <span class="fa fa-paper-plane"></span>
                                 </div>
                                 <div class="text">
-                                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                    <p><span>Instagram:</span> <a href="https://www.instagram.com/kt88cars/">kt88cars</a></p>
                                 </div>
                             </div>
                         </div>

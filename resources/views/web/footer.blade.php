@@ -26,15 +26,15 @@
                          <ul>
                              <li>
                                  <span class="icon ion-ios-pin"></span>
-                                 <span class="text">203 Fake St. Mountain View,San Francisco, California, USA</span>
+                                 <span class="text">Jln. Boulevard Bintaro Jaya Blok A37-38 Pondok Aren, Tanggerang Selatan, South Tangerang 15224</span>
                              </li>
                              <li>
-                                 <a href="#"><span class="icon ion-ios-call"></span>
-                                     <span class="text">+2 392 3929 210</span></a>
+                                 <a href="https://desty.page/kt88"><span class="icon ion-ios-call"></span>
+                                     <span class="text">082119716040</span></a>
                              </li>
-                             <li><a href="#">
+                             <li><a href="https://www.instagram.com/kt88cars/">
                                      <span class="icon ion-ios-send"></span>
-                                     <span class="text">info@yourdomain.com</span>
+                                     <span class="text">kt88cars</span>
                                  </a>
                              </li>
                          </ul>
@@ -52,24 +52,22 @@
                              class="icon d-flex align-items-center justify-content-center"><i
                                  class="ion-ios-list-box"></i></span>Latest News</h2>
                      <div class="block-21 mb-4 d-flex">
-                         <a class="img mr-4 rounded" style="background-image: url(images/image_1.jpg);"></a>
+                         <a class="img mr-4 rounded" style="background-image: url(web/assets/images/image_1.jpg);"></a>
                          <div class="text">
-                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control
-                                     about</a></h3>
+                             <h3 class="heading"><a href="https://www.caranddriver.com/news/a42395489/german-police-tesla-driver-asleep/">German Tesla Driver Pulled Over, Supposedly Asleep</a></h3>
                              <div class="meta">
-                                 <div><a href="#"><span class="icon-calendar"></span> Oct. 16, 2019</a></div>
+                                 <div><a href="https://www.caranddriver.com/news/a42395489/german-police-tesla-driver-asleep/"><span class="icon-calendar"></span> Jan. 5, 2023</a></div>
                                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
                                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                              </div>
                          </div>
                      </div>
                      <div class="block-21 mb-4 d-flex">
-                         <a class="img mr-4 rounded" style="background-image: url(images/image_2.jpg);"></a>
+                         <a class="img mr-4 rounded" style="background-image: url(web/assets/images/image_2.jpg);"></a>
                          <div class="text">
-                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control
-                                     about</a></h3>
+                             <h3 class="heading"><a href="https://www.caranddriver.com/news/a42394761/2023-honda-accord-price/">2023 Honda Accord Prices Are Up, but Not by Much</a></h3>
                              <div class="meta">
-                                 <div><a href="#"><span class="icon-calendar"></span> Oct. 16, 2019</a></div>
+                                 <div><a href="#"><span class="icon-calendar"></span> Jan. 4, 2023</a></div>
                                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
                                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                              </div>
@@ -96,27 +94,27 @@
                          <div class="row no-gutters">
                              <div class="col-4 col-md-4 p-1">
                                  <a href="#" class="img rounded"
-                                     style="background-image: url(images/insta-1.jpg);"></a>
+                                     style="background-image: url(web/assets/images/insta-1.jpg);"></a>
                              </div>
                              <div class="col-4 col-md-4 p-1">
                                  <a href="#" class="img rounded"
-                                     style="background-image: url(images/insta-2.jpg);"></a>
+                                     style="background-image: url(web/assets/images/insta-2.jpg);"></a>
                              </div>
                              <div class="col-4 col-md-4 p-1">
                                  <a href="#" class="img rounded"
-                                     style="background-image: url(images/insta-3.jpg);"></a>
+                                     style="background-image: url(web/assets/images/insta-3.jpg);"></a>
                              </div>
                              <div class="col-4 col-md-4 p-1">
                                  <a href="#" class="img rounded"
-                                     style="background-image: url(images/insta-4.jpg);"></a>
+                                     style="background-image: url(web/assets/images/insta-4.jpg);"></a>
                              </div>
                              <div class="col-4 col-md-4 p-1">
                                  <a href="#" class="img rounded"
-                                     style="background-image: url(images/insta-5.jpg);"></a>
+                                     style="background-image: url(web/assets/images/insta-5.jpg);"></a>
                              </div>
                              <div class="col-4 col-md-4 p-1">
                                  <a href="#" class="img rounded"
-                                     style="background-image: url(images/insta-6.jpg);"></a>
+                                     style="background-image: url(web/assets/images/insta-6.jpg);"></a>
                              </div>
                          </div>
                      </div>
@@ -128,12 +126,12 @@
                          Copyright &copy;
                          <script>
                              document.write(new Date().getFullYear());
-                         </script> All rights reserved.
+                         </script> KT 88 CARS All rights reserved.
                      </p>
                  </div>
                  <div class="col-md-6 col-lg-4 text-md-right">
-                     <p class="copyright">This template is made with <i class="ion-ios-heart" aria-hidden="true"></i>
-                         by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+                     <p class="copyright">KT 88 CARS
+                         by <a href="" target="_blank">kt88cars.com</a>
                      </p>
                  </div>
              </div>

@@ -11,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Car Dealer | Contact Us Page</title>
+    <title>KT 88 Cars</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url('web/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -38,7 +38,20 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2 style="color: orange">KTT88 <em style="color: white">Cars</em></h2></a>
+          <a class="navbar-brand" href="{{url('/')}}">
+        <div class="logo-image">
+            <img src="web/assets/images/KT88 Orange.png" class="img-fluid">
+      </div>
+      <style>
+         .logo-image{
+    width: 46px;
+    height: 20px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+      </style>
+      <h2 style="color: orange">KT88 <em style="color: white">Cars</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
