@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="{{url('web/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{url('web/assets/css/owl.css')}}">
 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+
   </head>
     <body>
 
@@ -36,7 +39,7 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header class="">
+    <header style="position: fixed;" class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="{{url('/')}}">

@@ -1,5 +1,6 @@
 @extends('layout.header')
 
+
 @section('content')
     <!-- content -->
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -116,7 +117,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>Doors</label>
-                                    <input required class="form-control" name="doors">
+                                    <input required class="form-control" name="doors" type="number">
                                 </div>
                             </div>
 
@@ -216,6 +217,18 @@
                                     <input required type="text" class="form-control" name="day_price">
                                 </div>
                             </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10 text-center">
+                                    <div class="">
+                                        <label for="exampleFormControlTextarea1">Description</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+                            <br>
                             <div class="row">
                                 <div class="col-md-3">
                                     <label>Image Of Car <br> <small style="color: red">Recomended size height 366px width
@@ -399,8 +412,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label>Doors</label>
-                                        <input required class="form-control" name="doors" placeholder="Doors"
-                                            value="{{ $car->doors }}">
+                                        <input required class="form-control" name="doors" placeholder="Doors"  type="number" value="{{ $car->doors }}">
                                     </div>
                                 </div>
 
@@ -862,5 +874,14 @@
                 console.log('Another image is false');
             }
         }
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    
+    <!-- <script>
+        $(document).ready(function() {
+            console.log("ready")
+        $('#summernote').summernote();
+}); -->
     </script>
 @endsection

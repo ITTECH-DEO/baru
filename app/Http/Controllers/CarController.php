@@ -155,6 +155,7 @@ class CarController extends Controller
         $car->millage = $request->millage;
         $car->status_id = $request->status;
         $car->whatsapp_id = $request->whatsapp;
+        $car->description = $request->description;
         $car->save();
         return redirect('cars')
             ->with('success', 'Data car successfully added!');

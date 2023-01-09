@@ -53,6 +53,13 @@ class WebController extends Controller
     public function detailCar($id)
     {
         $car = Car::find($id);
+
+        // if (!empty($car["img_car_lainnya1"])) {
+        //     return true;
+        // }else{
+        //     return false;
+        // }
+        // return $car["img_car_lainnya1"];
         return view('web.detail',compact('car'));
         
     }

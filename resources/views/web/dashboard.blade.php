@@ -1,27 +1,36 @@
-@include('web.headerdashboard')
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img style="height: 90vh" class="d-block w-100" src="web/assets/images/mobil3.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" style="height: 90vh" src="web/assets/images/mobil2.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" style="height: 90vh" src="web/assets/images/mobil4.jpg" alt="Third slide">
+@include('web.header')
+
+
+
+<div class="row">
+    <div class="col-lg">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img  class="d-block w-100" src="web/assets/images/mobil3.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"  src="web/assets/images/mobil2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"  src="web/assets/images/mobil4.jpg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>
+
+
 <!-- Page Content -->
-<div class="container-fluid m-5">
+
 <h2 style="padding: 20px 20px 30px; margin-top: 2px; text-align: center; position: 
 relative;"><span style="color:#FFA500!important">Rekomendasi</span> <span 
 style="color:#000000!important">Mobil</span></h2>

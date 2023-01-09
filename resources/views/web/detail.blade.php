@@ -18,34 +18,107 @@
    <div class="products">
        <div class="container">
            <div class="row">
-               <div class="col-md-3">
+               <div class="col-md">
                    <div>
-                       <br>
-                       <img src="{{ url($car->img_car) }}" alt="" class="img-fluid wc-image zoom_01 round">
+                       <button type="button" id="btn1" class="btn btn-light">Show More</button>
                    </div>
-                   <div>
-                       <br>
-                       <img src="{{ url($car->img_car2) }}" alt="" id="myImg" class="img-fluid wc-image zoom_01 round" style="display:none ;">
-                   </div>
+               </div>
+           </div>
+           <div class="row">
+               @if(!empty($car["img_car"]))
+               <div class="col-md">
+                       <div>
+                           <br>
+                           <img src="{{ url($car['img_car']) }}" alt="" class="img-thumbnail wc-image zoom_01">
+                       </div>
+
                    <br>
                </div>
-               <div class="col-md-3 ">
-                   <div>
-                       <br>
-                       <img src="{{ url($car->img_car3) }}" alt="" id="myImg2" class="img-fluid wc-image zoom_01 round " style="display:none ;">
-                   </div>
-                   <div>
-                       <br>
-                       <img src="{{ url($car->img_car4) }}" alt="" id="myImg3" class="img-fluid wc-image zoom_01 round" style="display:none ;">
-                   </div>
-                   <br>
-                   <div>
-                    <button type="button" id="btn1">Show More Image</button>
-                   </div>
-
-
+               @endif
+                   @if(!empty($car->img_car2))
+                   <div class="col-md">
+                       <div>
+                           <br>
+                           <img src="{{ url($car->img_car2) }}" alt="" id="myImg" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+                       </div>
                </div>
+                   @endif
+                   @if(!empty($car["img_car3"]))
 
+                   <div class="col-md">
+                   <div>
+                       <br>
+                       <img src="{{ url($car->img_car3) }}" alt="" id="myImg2" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+                   </div>
+                   </div>
+                   @else
+                   <p>kontk</p>
+               @endif
+                   @if(!empty($car->img_car4))
+                   <div class="col-md">
+                       <div>
+                           <br>
+                           <img src="{{ url($car->img_car4) }}" alt="" id="myImg3" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+                       </div>
+               </div>
+                   @endif
+
+
+               <br>
+
+
+           </div>
+           <div class="row">
+            @if(!empty($car->img_car_lainnya1))
+            <div class="col-md">
+        <div>
+            <br>
+            <img src="{{ url($car->img_car_lainnya1) }}" alt="" id="anot1" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+        </div>
+            </div>
+    @endif
+
+    @if(!empty($car->img_car_lainnya2))
+            <div class="col-md">
+        <div>
+            <br>
+            <img src="{{ url($car->img_car_lainnya2) }}" alt="" id="anot2" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+        </div>
+            </div>
+    @endif
+    <br>
+    @if(!empty($car->img_car_lainnya3))
+            <div class="col-md">
+        <div>
+            <br>
+            <img src="{{ url($car->img_car_lainnya3) }}" alt="" id="anot3" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+        </div>
+            </div>
+    @endif
+    <br>
+    @if(!empty($car->img_car_lainnya4))
+            <div class="col-md">
+        <div>
+            <br>
+            <img src="{{ url($car->img_car_lainnya4) }}" alt="" id="anot4" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+        </div>
+            </div>
+    @endif
+           </div>
+           <br><br>
+
+           <div class="row">
+            <div class="col-md-6">
+                <div class="card" style="width: 90%;">
+                    <div class="card-body">
+                      <h5 class="card-title">Deskripsi</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Keterangan Singkat</h6><br>
+                      <p class="card-text">{{$car->description}}</p>
+                      <!-- <a href="#" class="card-link">Instagram Post</a> -->
+                      <!-- <a href="#" class="card-link">Another link</a> -->
+                    </div>
+                  </div>
+            </div>
                <div class="col-md-6">
                    <form action="#" method="post" class="form">
                        <ul class="list-group list-group-flush">
@@ -147,6 +220,7 @@
                        </ul>
                    </form>
                </div>
+            </div>
            </div>
        </div>
    </div>
@@ -349,7 +423,7 @@
                            </div>
                            <label>Address</label>
                            <textarea class="form-control" name="address" placeholder="Address Of User">
-                          
+
                       </textarea>
                    </div>
                </div>

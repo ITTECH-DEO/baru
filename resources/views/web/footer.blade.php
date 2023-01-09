@@ -146,6 +146,10 @@
      <!-- <script src="{{ url('web/assets/js/jquery.min.js') }}"></script> -->
      <script src="{{ url('web/assets/js/popper.js') }}"></script>
      <script src="{{ url('web/assets/js/bootstrap.min.js') }}"></script>
+
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
      {{-- <script src="{{url('web/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script> --}}
      <script src="{{ url('web/assets/js/main1.js') }}"></script>
      {{-- <script src="{{url('dashboard/js/google-map.js')}}"></script> --}}
@@ -175,11 +179,39 @@
              easing: true
          });
          $(document).ready(function() {
+            $('#summernote').summernote();
              $('#btn1').on("click", function(e) {
+
+                 // var link = $(this);
+                 // console.log(link.text())
+                 //
+                 // if (link.text() == "Show More"){
+                 //     link.text('Show Less');
+                 // }else{
+                 //     link.text('Show More');
+                 // }
+
+                 // $('.showpanel').slideToggle('slow', function() {
+                 //     if ($(this).is(':visible')) {
+                 //         link.text('close');
+                 //     } else {
+                 //         link.text('open');
+                 //     }
+                 // });
+
                  $('#myImg').toggle('slow');
                  $('#myImg2').toggle('slow');
                  $('#myImg3').toggle('slow');
-
+                 $('#myImg4').toggle('slow');
+                 $('#anot1').toggle('slow');
+                 $('#anot2').toggle('slow');
+                 $('#anot3').toggle('slow');
+                 $('#anot4').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
              });
          });
      </script>

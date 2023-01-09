@@ -78,7 +78,7 @@ class TransactionController extends Controller
 
     public function createOnline(Request $request)
     {
-        
+
         //$img_ktp = 'img_ktp';
         $Transactions = new Transaction;
         $Transactions->code_transaction = strtoupper(Str::random(10));
@@ -148,6 +148,7 @@ class TransactionController extends Controller
     public function indexReport()
     {
         Session::put('menu','report');
+
         $now =  Carbon::now()->format('Y-m-d');
         return view('dashboard.report',compact('now'));
     }

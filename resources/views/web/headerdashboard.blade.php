@@ -40,7 +40,7 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header class="">
+    <header style="position: fixed;" class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="{{url('/')}}">

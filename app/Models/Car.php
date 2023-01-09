@@ -10,6 +10,34 @@ class Car extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = [
+        'id',
+        'name_car',
+        'type_car',
+        'description',
+        'img_car2',
+        'img_car3',
+        'img_car4',
+        'img_car_lainnya1',
+        'img_car_lainnya2',
+        'img_car_lainnya3',
+        'img_car_lainnya4',
+        'doors',
+        'seats',
+        'model',
+        'fisrt_registartion',
+        'millage',
+        'fuel',
+        'engine_size',
+        'power',
+        'color',
+        'status_id',
+        'whatsapp_id',
+        'vendor_id',
+        'day_price',
+
+    ];
     public function vendor()
     {
     	return $this->belongsTo(Vendor::class);
