@@ -25,6 +25,7 @@ class Car extends Model
         'img_car_lainnya4',
         'doors',
         'seats',
+        'tahun',
         'model',
         'fisrt_registartion',
         'millage',

@@ -1,10 +1,36 @@
-@include('web.header')
 
-<!-- Page Content -->
+@extends('web.waras')
+
+@section("content")
+<!-- Banner Here -->
+<div class="banner header-text">
+    <div class="owl-banner owl-carousel">
+      <div class="banner-item-01">
+        <div class="text-content">
+          <h4>Find your car today!</h4>
+          <h2>Kt 88 Cars For U !</h2>
+        </div>
+      </div>
+      <div class="banner-item-02">
+        <div class="text-content">
+          <h4>Find yout favorite car now !</h4>
+          <h2>Kt 88 Cars For U !</h2>
+        </div>
+      </div>
+      <div class="banner-item-03">
+        <div class="text-content">
+          <h4>Find your car in here !</h4>
+          <h2>Kt 88 Cars For U !</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
 
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+{{-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img style="height: 90vh" class="d-block w-100" src="web/assets/images/mobil3.jpg" alt="First slide">
@@ -24,29 +50,27 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
+</div> --}}
 
 <div class="container-fluid">
 
 
     <div class="row">
-
-
             @php $modelT = new App\Models\User(); @endphp
             @foreach ($cars as $car)
             @php $data = $modelT->cek_booked($car->id); @endphp
             @if ($car->status_id == 1)
                 <div class="col-md my-2">
-            <div class="card ">
+            <div class="card">
                 <img class="zoom_01" src="{{ $car->img_car }}" style="height: 100%; width: 100%" data-zoom-image="{{ $car->img_car }}" />
                 <div class="card-body">
-
                     <div class="pull-left">
                         <p>Nama : </p> <b>{{ $car->name_car }}</b>
                         <p>Type Mobil:</p> <b>{{ $car->type_car }}</b>
                         <p>Vendor Mobil:</p> <b>{{ $car->vendor->name_vendor }}</b>
                     </div>
                 </div>
+                
                 <div class="card-footer">
                     <div class="row">
                         <div class="pull-left col-md-6">
@@ -74,8 +98,6 @@
                         </div>
                     </div>
                 </div>
-
-
                      </div>
                 </div>
             @else
@@ -133,4 +155,4 @@
         </div>
     </div>
 </div>
-@include('web.footer')
+@stop

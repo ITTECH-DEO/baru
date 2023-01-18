@@ -37,7 +37,7 @@ Route::post('/about_add', [AboutUsController::class, 'create'])->middleware('che
 Route::post('/about_update/{id}', [AboutUsController::class, 'update'])->middleware('checkRole:admin')->middleware('checkRole:admin');
 //web
 Route::get('homepage', [WebController::class, 'index']);
-Route::get('car_detail/{id}', [WebController::class, 'detailCar']);
+Route::get('car_detail/{id}', [WebController::class, 'detailCar'])->name('car.detail');
 Route::post('/car_search', [WebController::class, 'searchCar']);
 Route::post('/register_customer', [WebController::class, 'registCustomer']);
 Route::get('/rental_car/{id}', [WebController::class, 'rentalCar']);

@@ -1,11 +1,33 @@
- <html>
+ {{-- <html>
 
- <body>
+ <body> --}}
 
      <head>
          <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
          <link rel="stylesheet" href="{{ url('web/assets/css/ionicons.min.css') }}">
          <link rel="stylesheet" href="{{ url('web/assets/css/style1.css') }}">
+         <style>
+     
+            .aspect-16to9 {
+         height: auto;
+         width: 100%;
+       }
+       
+       .p-16to9 {
+         position: relative;
+         padding-bottom: 56%;
+         overflow: hidden;
+       }
+       
+       .card-body-content {
+         position: absolute;
+         top: 1rem;
+         bottom: 1rem;
+         right: 1rem;
+         left: 1rem;
+         overflow: hidden;
+       }
+       </style>
      </head>
      <style>
          .text {
@@ -14,7 +36,7 @@
          }
      </style>
      <footer class="footer-09">
-         <div class="container">
+         <div class="container-fluid">
              <div class="row">
                  <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
                      <h2 class="footer-heading d-flex">
@@ -165,6 +187,7 @@
      <!-- Additional Scripts -->
      <script src="{{ url('web/assets/js/custom.js') }}"></script>
      <script src="{{ url('web/assets/js/owl.js') }}"></script>
+     
      <script type="text/javascript">
          function submitForm() {
              $('#muter_beh').show();
@@ -178,8 +201,11 @@
          $(".zoom_01").elevateZoom({
              easing: true
          });
+         
+
          $(document).ready(function() {
-            $('#summernote').summernote();
+          
+    
              $('#btn1').on("click", function(e) {
 
                  // var link = $(this);
@@ -215,6 +241,6 @@
              });
          });
      </script>
- </body>
+ {{-- </body>
 
- </html>
+ </html> --}}

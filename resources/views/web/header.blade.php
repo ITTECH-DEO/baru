@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{url('web/assets/css/owl.css')}}">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="{{ url('web/vendor/jquery/jquery.min.js') }}"></script>
 
 
   </head>
@@ -39,7 +40,7 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
-    <header style="position: fixed;" class="">
+    <header  class="fixedElement">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="{{url('/')}}">
@@ -94,4 +95,20 @@
           </div>
         </div>
       </nav>
+
+      <script>
+    
+    $( document ).ready(function() {
+      $(window).scroll(function(e){ 
+  var $el = $('.fixedElement'); 
+  var isPositionFixed = ($el.css('position') == 'fixed');
+  if ($(this).scrollTop() > 200 && !isPositionFixed){ 
+    $el.css({'position': 'fixed', 'top': '0px'}); 
+  }
+  if ($(this).scrollTop() < 200 && isPositionFixed){
+    $el.css({'position': 'static', 'top': '0px'}); 
+  } 
+});
+});
+      </script>
     </header>

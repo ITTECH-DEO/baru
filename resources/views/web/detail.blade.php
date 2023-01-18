@@ -1,5 +1,6 @@
-   @include('web.header')
+@extends('web.waras')
 
+@section("content")
 
    <!-- Page Content -->
    <div class="page-heading about-heading header-text" style="background-image: url(<?php echo url('web/assets/images/heading-6-1920x500.jpg'); ?>);">
@@ -31,7 +32,6 @@
                            <br>
                            <img src="{{ url($car['img_car']) }}" alt="" class="img-thumbnail wc-image zoom_01">
                        </div>
-
                    <br>
                </div>
                @endif
@@ -125,7 +125,6 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Type</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->type_car) }}</strong>
                                </div>
                            </li>
@@ -133,7 +132,6 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Vendor</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->vendor->name_vendor) }}</strong>
                                </div>
                            </li>
@@ -141,7 +139,6 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left"> Model</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->model) }}</strong>
                                </div>
                            </li>
@@ -173,7 +170,6 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Engine size</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->engine_size) }}</strong>
                                </div>
                            </li>
@@ -181,7 +177,6 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Power</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->power) }}</strong>
                                </div>
                            </li>
@@ -189,7 +184,6 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Number of seats</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->seats) }}</strong>
                                </div>
                            </li>
@@ -197,7 +191,6 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Doors</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->doors) }}</strong>
                                </div>
                            </li>
@@ -205,14 +198,12 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Color</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->color) }}</strong>
                                </div>
                            </li>
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">WhatsApp Number</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->whatsapp->nama_cabang) }} :
                                        {{ strtoupper($car->whatsapp->wa) }}</strong>
                                </div>
@@ -437,6 +428,4 @@
        </div>
    </div>
 
-   @include('web.footer')
-
-
+   @stop

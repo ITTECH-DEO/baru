@@ -19,9 +19,9 @@
                         <div class="clearfix">
                             <center>
                                 <br>
-                                <img class="pull-right" style="width: 200px;height: 90px;" src="{{ public_path($car->img_car) }}">
-                                <img class="pull-right" style="width: 200px;height: 90px;" src="{{ public_path($car->img_car2) }}">
-                                <img class="pull-right" style="width: 200px;height: 90px;" src="{{ public_path($car->img_car3) }}">   
+                                <img class="pull-right" style="width: 200px;height: 90px;" src="{{ url($car->img_car) }}">
+                                <img class="pull-right" style="width: 200px;height: 90px;" src="{{ url($car->img_car2) }}">
+                                <img class="pull-right" style="width: 200px;height: 90px;" src="{{ url($car->img_car3) }}">   
                             </center>
                             <br>
                         </div>

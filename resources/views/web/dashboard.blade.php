@@ -1,76 +1,158 @@
-@include('web.header')
 
+@extends('web.waras')
 
-
-<div class="row">
-    <div class="col-lg">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img  class="d-block w-100" src="web/assets/images/mobil3.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100"  src="web/assets/images/mobil2.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100"  src="web/assets/images/mobil4.jpg" alt="Third slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+@section("content")
+<div class="banner header-text">
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <h4>Find your car today!</h4>
+            <h2>Kt 88 Cars For U !</h2>
+          </div>
         </div>
+        <div class="banner-item-02">
+          <div class="text-content">
+            <h4>Find yout favorite car now !</h4>
+            <h2>Kt 88 Cars For U !</h2>
+          </div>
+        </div>
+        <div class="banner-item-03">
+          <div class="text-content">
+            <h4>Find your car in here !</h4>
+            <h2>Kt 88 Cars For U !</h2>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
+    <!-- Banner Ends Here -->
 
-<!-- Page Content -->
+    {{-- AWAL BAGIAN --}}
+    <div class="latest-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2 style="font-weight: bold"><span style="color: orange">Rekomendasi</span> Mobil</h2>
+              <a href="/homepage">view more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
 
-<h2 style="padding: 20px 20px 30px; margin-top: 2px; text-align: center; position: 
-relative;"><span style="color:#FFA500!important">Rekomendasi</span> <span 
-style="color:#000000!important">Mobil</span></h2>
-    <br/>
-    <div class="owl-carousel owl-theme">
-        @foreach ($cars as $car)
-            @if ($car->status_id == 1)
-                <div class="card item" style="max-width: 200px;">
-                    <img src="{{ $car->img_car }}" style="height: 100%; width: 100%" />
-                    <div class="card-body">
 
-                        <div class="pull-left">
-                            <p>Nama : </p> <b>{{ $car->name_car }}</b>
-                            <p>Type Mobil:</p> <b>{{ $car->type_car }}</b>
-                            <p>Vendor Mobil:</p> <b>{{ $car->vendor->name_vendor }}</b>
-                        </div>
-                    </div>
+          @foreach ($cars as $car)
+
+          <div class="col-lg-4 col-md-6 ">
+            <div class="product-item p-2 shadow rounded">
+              <a href="{{ route('car.detail', ['id'=>$car["id"]]) }}"><img class="rounded-lg" src="{{url($car->img_car)}}" alt="NGeng Ngeng1"></a>
+              <div class="down-content">
+                <a href="{{ route('car.detail', ['id'=>$car["id"]]) }}"><h4>{{$car->name_car}}</h4></a>
+                @php
+                    $hasil_rupiah = "Rp " . number_format($car->day_price,2,',','.');
+                @endphp
+                <h6> {{ $hasil_rupiah }}</h6>
+                <p>{{$car->power}} &nbsp;/&nbsp; {{$car->fuel}} &nbsp;/&nbsp; {{$car->tahun}} &nbsp;</p>
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> {{$car->millage}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> {{$car->engine_size}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> {{$car->type_car}}</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+    </div>
+    {{-- AKHIR BAGIAN --}}
+
+       {{-- AWAL BAGIAN --}}
+       <div class="latest-products">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-heading">
+                <h2 style="font-weight: bold"><span style="color: orange">Mobil</span> Matic</h2>
+                <a href="/homepage">view more <i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            @foreach ($matic as $car)
+            <div class="col-lg-4 col-md-6 ">
+              <div class="product-item p-2 shadow rounded">
+                <a href="{{ route('car.detail', ['id'=>$car["id"]]) }}"><img class="rounded-lg" src="{{url($car->img_car)}}" alt="NGeng Ngeng1"></a>
+                <div class="down-content">
+                  <a href="{{ route('car.detail', ['id'=>$car["id"]]) }}"><h4>{{$car->name_car}}</h4></a>
+                  @php
+                      $hasil_rupiah = "Rp " . number_format($car->day_price,2,',','.');
+                  @endphp
+                  <h6> {{ $hasil_rupiah }}</h6>
+  
+                  <p>{{$car->power}} &nbsp;/&nbsp; {{$car->fuel}} &nbsp;/&nbsp; {{$car->tahun}} &nbsp;</p>
+  
+                  <small>
+                    <strong title="Author"><i class="fa fa-dashboard"></i> {{$car->millage}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <strong title="Author"><i class="fa fa-cube"></i> {{$car->engine_size}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <strong title="Views"><i class="fa fa-cog"></i> {{$car->type_car}}</strong>
+                  </small>
                 </div>
-            @else
-            @endif
-        @endforeach
+              </div>
+            </div>
+            @endforeach
+          </div>
+        </div>
+      </div>
+  
+      {{-- AKHIR BAGIAN --}}
 
+         {{-- AWAL BAGIAN --}}
+    <div class="latest-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2 style="font-weight: bold"><span style="color: orange">Mobil</span> Manual</h2>
+              <a href="/homepage">view more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+
+
+          @foreach ($manual as $car)
+
+          <div class="col-lg-4 col-md-6 ">
+            <div class="product-item p-2 shadow rounded">
+              <a href="{{ route('car.detail', ['id'=>$car["id"]]) }}"><img class="rounded-lg" src="{{url($car->img_car)}}" alt="NGeng Ngeng1"></a>
+              <div class="down-content">
+                <a href="{{ route('car.detail', ['id'=>$car["id"]]) }}"><h4>{{$car->name_car}}</h4></a>
+
+                @php
+                    $hasil_rupiah = "Rp " . number_format($car->day_price,2,',','.');
+                @endphp
+                <h6> {{ $hasil_rupiah }}</h6>
+
+                <p>{{$car->power}} &nbsp;/&nbsp; {{$car->fuel}} &nbsp;/&nbsp; {{$car->tahun}} &nbsp;</p>
+
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> {{$car->millage}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> {{$car->engine_size}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> {{$car->type_car}}</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+              
+          @endforeach
+        </div>
+      </div>
     </div>
-</div>
 
-@include('web.footer')
-<script>
-    let owl = $('.owl-carousel');
-    owl.owlCarousel({
-        margin: 25,
-        responsiveClass: true,
-        autoWidth: true,
+    {{-- AKHIR BAGIAN --}}
+          
 
-    })
-    owl.on('mousewheel', '.owl-stage', function(e) {
-        if (e.deltaY > 0) {
-            owl.trigger('next.owl');
-        } else {
-            owl.trigger('prev.owl');
-        }
-        e.preventDefault();
-    });
-</script>
+
+                
+
+           
+        
+
+@stop

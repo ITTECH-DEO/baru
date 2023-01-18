@@ -169,6 +169,12 @@
                                     <input required class="form-control" name="seats">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Tahun</label>
+                                    <input required class="form-control" name="tahun">
+                                </div>
+                            </div>
 
                             <div class="row">
                                 <div class="col-md-6">

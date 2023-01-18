@@ -90,6 +90,7 @@ class CarController extends Controller
         $car->type_car = $request->type_car;
         $car->doors = $request->doors;
         $car->seats = $request->seats;
+        $car->tahun = $request->tahun;
         $car->vendor_id = $request->vendor_id;
         $car->img_car = $this->uploadFile($request, $img_car);
         $car->img_car2 = $this->uploadFile($request, $img_car2);

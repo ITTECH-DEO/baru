@@ -14,8 +14,7 @@
     <title>Car Dealer</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{url('web/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{url('web/assets/css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{url('web/assets/css/style.css')}}">
@@ -36,35 +35,39 @@
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->
+
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="{{url('/')}}"><h2 style="color: orange">KT88 <em style="color: white">Cars</em></h2></a>
+          <div class="logo-image">
+            <img src="web/assets/images/KT88 Orange.png" class="img-fluid">
+      </div>
+      <style>
+         .logo-image{
+    width: 100px;
+    height: 50px;
+    border-radius: 1%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+      </style>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                    <a class="nav-link" href="{{url('/')}}">Home
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
                       <span class="sr-only">(current)</span>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url('/mobil')}}">Cars
-                      <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{url('aboutUs')}}">About Us
-                    <span class="sr-only">(current)</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{url('/contact')}}">Contact Us
-                    <span class="sr-only">(current)</span>
-                  </a>
-              </li>
+                </li> 
+
+                <li class="nav-item"><a class="nav-link" href="/homepage">Cars</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="/aboutUs">About Us</a></li>
+                
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+
                 @auth
                  <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Logout</a>
@@ -81,19 +84,30 @@
     </header>
 
     <!-- Page Content -->
-    <div class="page-heading contact-heading header-text" 
-    style="background-image: url(<?php echo url('web/assets/images/heading-4-1920x500.jpg')?>);">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-content">
-              <h4>KTT88 CARS</h4>
-              <h2>LOGIN PAGE</h2>
-            </div>
+    <div class="banner header-text">
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <h4>Find your car today!</h4>
+            <h2>Kt 88 Cars For U !</h2>
+          </div>
+        </div>
+        <div class="banner-item-02">
+          <div class="text-content">
+            <h4>Find yout favorite car now !</h4>
+            <h2>Kt 88 Cars For U !</h2>
+          </div>
+        </div>
+        <div class="banner-item-03">
+          <div class="text-content">
+            <h4>Find your car in here !</h4>
+            <h2>Kt 88 Cars For U !</h2>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 
     
