@@ -79,7 +79,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item {{ Request::is('cars*') ? 'active' : '' }}"><a class="nav-link"
+                        <li class="nav-item {{ Request::is('homepage*') ? 'active' : '' }}"><a class="nav-link"
                                 href="/homepage">Cars</a></li>
 
                         <li class="nav-item {{ Request::is('aboutUs*') ? 'active' : '' }}"><a class="nav-link"
