@@ -203,43 +203,7 @@
          });
          
 
-         $(document).ready(function() {
-          
-    
-             $('#btn1').on("click", function(e) {
-
-                 // var link = $(this);
-                 // console.log(link.text())
-                 //
-                 // if (link.text() == "Show More"){
-                 //     link.text('Show Less');
-                 // }else{
-                 //     link.text('Show More');
-                 // }
-
-                 // $('.showpanel').slideToggle('slow', function() {
-                 //     if ($(this).is(':visible')) {
-                 //         link.text('close');
-                 //     } else {
-                 //         link.text('open');
-                 //     }
-                 // });
-
-                 $('#myImg').toggle('slow');
-                 $('#myImg2').toggle('slow');
-                 $('#myImg3').toggle('slow');
-                 $('#myImg4').toggle('slow');
-                 $('#anot1').toggle('slow');
-                 $('#anot2').toggle('slow');
-                 $('#anot3').toggle('slow');
-                 $('#anot4').toggle('slow');
-                //  $('#anot2').toggle('slow');
-                //  $('#anot2').toggle('slow');
-                //  $('#anot2').toggle('slow');
-                //  $('#anot2').toggle('slow');
-                //  $('#anot2').toggle('slow');
-             });
-         });
+       
      </script>
  {{-- </body>
 
