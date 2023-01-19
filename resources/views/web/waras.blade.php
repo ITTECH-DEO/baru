@@ -22,7 +22,6 @@
 
     
     @yield('style')
-    
      {{-- <!-- Bootstrap core CSS -->
      <link href=" {{url('cyborg/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
      <!-- Additional CSS Files -->
@@ -33,12 +32,7 @@
 
   </head>
 
- 
-  
-
   <body>
-    
-
     <!-- ***** Preloader Start ***** -->
      <div id="preloader">
         <div class="jumper">
@@ -54,7 +48,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <div class="logo-image">
-            <img src="web/assets/images/KT88 Orange.png" class="img-fluid">
+            <img src="{{asset("web/assets/images/KT88 Orange.png")}}" class="img-fluid">
       </div>
       <style>
          .logo-image{
@@ -70,11 +64,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                 {{-- <li class="nav-item active"> --}}
+                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home
                       <span class="sr-only">(current)</span>
                     </a>
-                 {{-- </li>   --}}
+                 </li>  
                  
                 <li class="nav-item"><a class="nav-link" href="/homepage">Cars</a></li>
 
@@ -105,7 +99,7 @@
     @yield('content')
     
     {{-- <div class="container-fluid"> --}}
-      @include('web.footer')
+    @include('web.footer')
     {{-- </div> --}}
     
    
