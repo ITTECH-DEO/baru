@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
+use App\Models\Bannerhomepage;
+use App\Models\Meta;
 use Illuminate\Http\Request;
 use App\Models\Car;
 use App\Models\User;
@@ -28,12 +31,18 @@ class WebController extends Controller
 
     public function index()
     {
+        // return "ok";
+        $bannerhome = Bannerhomepage::all();
+        // $viewproduct =Meta::find($id);
         $cars = Car::with('vendor')->paginate(4);
-        return view('web.index',compact('cars'));
+        return view('web.index',compact('cars','bannerhome'));
         //return $cars;
     }
 
-
+    // public function viewmeta($id){
+    //     $viewproduct = \App\Models\Meta::find($id);
+    //     return view('web.index',compact('meta'));
+    //   }
     public function registCustomer(Request $request)
     {
         $User = new User;

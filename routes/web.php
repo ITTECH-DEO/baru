@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AboutUsWebController;
+use App\Http\Controllers\BanneraboutusController;
+use App\Http\Controllers\BannercontactController;
+use App\Http\Controllers\BannerhomepageController;
+use App\Http\Controllers\LeaderboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
@@ -14,6 +18,8 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WhatsappController;
 use App\Http\Controllers\ReturnCarController;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\MetaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,9 +35,37 @@ Route::get('/mobil', function () {
     return redirect('homepage');
 });
 
+//banner
+Route::get('banner', [BannerController::class, 'indexBanner'])->name('banner');
+Route::post('/banner_add', [BannerController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+Route::get('/banner_delete/{id}', [BannerController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+// Route::post('/banner_update/{id}', [BannerController::class, 'update'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+
+//bannerhomepage
+Route::get('bannerhome', [BannerhomepageController::class, 'indexBanner'])->name('bannerhome');
+Route::post('/bannerhome_add', [BannerhomepageController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+Route::get('/bannerhome_delete/{id}', [BannerhomepageController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+
+//banneraboutus
+Route::get('banneraboutus', [BanneraboutusController::class, 'indexBanner'])->name('banneraboutus');
+Route::post('/banneraboutus_add', [BanneraboutusController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+Route::get('/banneraboutus_delete/{id}', [BanneraboutusController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+
+//bannercontact
+Route::get('bannercontact', [BannercontactController::class, 'indexBanner'])->name('bannercontact');
+Route::post('/bannercontact_add', [BannercontactController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+Route::get('/bannercontact_delete/{id}', [BannercontactController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
+
+
+//meta
+Route::get('/add-meta',[MetaController::class,'addmeta'])->name('add.meta');
+Route::post('/store-meta',[MetaController::class,'storemeta'])->name('store.meta');
+//Route::get('/list-meta',[MetaController::class,'listmeta'])->name('list.meta');
+Route::get('/homepage/{id}',[WebController::class,'index']);
+
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('aboutUs', [AboutUsWebController::class, 'indexWeb'])->name('about');
-Route::get('aboutUsAdm', [AboutUsController::class, 'indexAdm'])->name('about.adm')->middleware('checkRole:admin');;
+Route::get('aboutUsAdm', [AboutUsController::class, 'indexAdm'])->name('about.adm')->middleware('checkRole:admin');
 Route::get('/about_delete/{id}', [AboutUsController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
 Route::post('/about_add', [AboutUsController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
 Route::post('/about_update/{id}', [AboutUsController::class, 'update'])->middleware('checkRole:admin')->middleware('checkRole:admin');
@@ -103,3 +137,9 @@ Route::get('/transaction_action/{id}/{status}', [TransactionController::class, '
 Route::get('/transaction_print_invoice/{id}', [TransactionController::class, 'print_pdf_invoice'])->middleware('checkRole:admin');
 Route::get('/transaction_car/{id}', [TransactionController::class, 'changeStatusDone'])->middleware('checkRole:admin');
 Route::get('/report/transactions', [TransactionController::class, 'indexReport'])->middleware('checkRole:admin');
+
+Route::get("/leaderboard-admin" , [LeaderboardController::class, 'index'])->name("leaderboard.admin");
+Route::post("/leaderboard-admin-input" , [LeaderboardController::class, 'input'])->name("add.penjualan");
+
+
+Route::get("/leaderboard" , [LeaderboardController::class, 'marketing_index'])->name("leaderboard.index");

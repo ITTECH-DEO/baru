@@ -1,18 +1,21 @@
 @extends('web.waras')
-
+{{-- @foreach ($viewproduct as $v)
+@section('title',$v->product_meta_title)
+@section('description',$v->product_meta_description)
+@section('keywords',$v->product_meta_keywords)
+@endforeach --}}
 @section('content')
     <!-- Banner Here -->
     <div class="banner header-text">
-        <div class="owl-banner owl-carousel">
-            {{-- @foreach ($collection as $item) --}}
-                <div class="banner-item" style="background-image: url({{ asset('') }});">
+        <div class="owl-banner owl-carousel">            
+            @foreach ($bannerhome as $bh)
+                <div class="banner-item" style="background-image: url({{ asset($bh->image) }});">
                     <div class="text-content">
                         <h4>Find your car today!</h4>
                         <h2>Kt 88 Cars For U !</h2>
                     </div>
                 </div>
-            {{-- @endforeach --}}
-
+            @endforeach
         </div>
     </div>
     </div>

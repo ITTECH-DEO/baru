@@ -39,6 +39,7 @@
                             class="fa fa-exchange">&nbsp;</em> Order</a></li>
                 <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ url('transaction_return') }}"><em
                             class="fa fa-undo">&nbsp;</em> Out Car</a></li>
+
                 <li class="parent {{ $act == 'user_admin' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#sub-item-1">
                         <em class="fa fa-users">&nbsp;</em> User Menu <span data-toggle="collapse" href="#sub-item-1"
@@ -55,9 +56,29 @@
                 </li>
                 <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ route('about.adm') }}"><em
                             class="fa fa-envelope">&nbsp;</em> About-Us</a></li>
+
+                            <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ route('banner') }}"><em
+                                class="fa fa-envelope">&nbsp;</em> Banner</a></li>
+                            
+                                <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ route('bannerhome') }}"><em
+                                    class="fa fa-envelope">&nbsp;</em> Banner Home Page</a></li>
+
+                                    <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ route('banneraboutus') }}"><em
+                                        class="fa fa-envelope">&nbsp;</em> Banner About us</a></li>    
+
+                                        <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ route('bannercontact') }}"><em
+                                            class="fa fa-envelope">&nbsp;</em> Banner Contact</a></li>     
+                            
+                         <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ route('leaderboard.admin') }}"><em
+                                    class="fa fa-envelope">&nbsp;</em> Leaderboard</a></li>
+                                    <li class="{{ $act == 'return' ? 'active' : '' }}"><a href="{{ route('add.meta') }}"><em
+                                        class="fa fa-envelope">&nbsp;</em> Meta Data</a></li>            
+                            
             @elseif (Auth::user()->role == 'marketing')
                 <li class="{{ $act == 'cars' ? 'active' : '' }}"><a href="{{ url('cars') }}"><em
                             class="fa fa-car">&nbsp;</em> Car </a></li>
+            <li class="{{ $act == 'leaderboard' ? 'active' : '' }}"><a href="{{ route('leaderboard.index') }}"><em
+                    class="fa fa-car">&nbsp;</em> Leaderboard </a></li>
             @endif
 
             <li>

@@ -3,30 +3,19 @@
 @section("content")
 <!-- Banner Here -->
 <div class="banner header-text">
-    <div class="owl-banner owl-carousel">
-      <div class="banner-item-01">
-        <div class="text-content">
-          <h4>Find your car today!</h4>
-          <h2>Kt 88 Cars For U !</h2>
-        </div>
-      </div>
-      <div class="banner-item-02">
-        <div class="text-content">
-          <h4>Find yout favorite car now !</h4>
-          <h2>Kt 88 Cars For U !</h2>
-        </div>
-      </div>
-      <div class="banner-item-03">
-        <div class="text-content">
-          <h4>Find your car in here !</h4>
-          <h2>Kt 88 Cars For U !</h2>
-        </div>
-      </div>
-    </div>
+  <div class="owl-banner owl-carousel">            
+      @foreach ($banneraboutus as $bs)
+          <div class="banner-item" style="background-image: url({{ asset($bs->image) }});">
+              <div class="text-content">
+                  <h4>Find your car today!</h4>
+                  <h2>Kt 88 Cars For U !</h2>
+              </div>
+          </div>
+      @endforeach
   </div>
 </div>
 </div>
-
+</div>
 
 <div class="products">
   <div class="container">

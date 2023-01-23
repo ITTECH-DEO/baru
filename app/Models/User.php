@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Transaction;
@@ -111,6 +112,12 @@ class User extends Authenticatable
                 ->where('car_id',$id)
                 ->first();
         return $data;
+
+    }
+
+    public function leaderboards()
+    {
+        return $this->hasMany(Leaderboard::class, 'user_id', 'id');
 
     }
 }
