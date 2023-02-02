@@ -141,7 +141,7 @@
                     </div>
                   </div>
             </div>
-               <div class="col-md-6">
+               <div class="col-md-5">
                    <form action="#" method="post" class="form">
                        <ul class="list-group list-group-flush">
                            <li class="list-group-item">
