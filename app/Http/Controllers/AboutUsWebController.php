@@ -15,7 +15,8 @@ class AboutUsWebController extends Controller
 {
     public function indexWeb()
     {
-        $banneraboutus = Banneraboutus::all();
+        $banneraboutus = Banneraboutus::first();
+//        return $banneraboutus;
         $about = About::orderBy('updated_at', 'DESC')->latest()->take(1)->get();
         // dd($about);
         Session::put('menu','whatsapp');
@@ -24,7 +25,7 @@ class AboutUsWebController extends Controller
 
     public function contact()
     {
-        $bannercontact = Bannercontact::all();
+        $bannercontact = Bannercontact::first();
         $whatsapp = Whatsapp::orderBy('updated_at', 'DESC')->take(3)->get();
         $admin = User::where('role', 'admin')->latest()->take(1)->get();
         // dd($admin);

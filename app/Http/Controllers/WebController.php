@@ -33,9 +33,11 @@ class WebController extends Controller
     {
         // return "ok";
         $bannerhome = Bannerhomepage::all();
-        // $viewproduct =Meta::find($id);
+        $viewproduct =Meta::find(1);
+        // return $viewproduct;
         $cars = Car::with('vendor')->paginate(4);
-        return view('web.index',compact('cars','bannerhome'));
+//        return $cars;
+        return view('web.index',compact('cars','bannerhome','viewproduct'));
         //return $cars;
     }
 
@@ -70,7 +72,7 @@ class WebController extends Controller
         // }
         // return $car["img_car_lainnya1"];
         return view('web.detail',compact('car'));
-        
+
     }
 
 }

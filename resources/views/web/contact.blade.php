@@ -1,40 +1,55 @@
 @extends('web.waras')
 
+@section("style")
+    <style>
+        .mirror{
+            display: inline-block;
+            font-size: 30px;
+
+            -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+            -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+            -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+    </style>
+@endsection
+
 @section("content")
 <!-- Banner Here -->
-<div class="banner header-text">
-    <div class="owl-banner owl-carousel">            
-        @foreach ($bannercontact as $bc)
-            <div class="banner-item" style="background-image: url({{ asset($bc->image) }});">
-                <div class="text-content">
-                    <h4>Find your car today!</h4>
-                    <h2>Kt 88 Cars For U !</h2>
-                </div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="p-3" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+            <div class="text-center">
+                <h1 class="display-3 p-3 text-white" style="background-color: black">CONTACT</h1>
+                <h1 class="display-3 p-3 text-white mirror" style="background-color: black">U</h1>
+                <h1 class="display-3 p-3 text-white mirror" style="background-color: black">S</h1>
             </div>
-        @endforeach
+
+        </div>
+        <img src="{{url($bannercontact->image)}}" style='height: 500px; width: 100%; object-fit: cover' alt="">
     </div>
 </div>
-</div>
-</div>
 
 
-<section class="ftco-section">
+
+
+{{--<section class="ftco-section">--}}
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">Contact Us</h2>
-            </div>
-        </div>
+{{--        <div class="row justify-content-center">--}}
+{{--            <div class="col-md-6 text-center mb-5">--}}
+{{--                <h2 class="heading-section">Contact Us</h2>--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="wrapper">
                     <div class="row no-gutters mb-5">
                         <div class="col-md-7 ">
                             <div class="contact-wrap w-100 p-md-5 p-4 mr-3 ">
-                                <h3 class="mb-4">Contact Us</h3>
+                                <h3 class="mb-4">Our Offices</h3>
                                 <div id="form-message-warning" class="mb-4"></div>
 
-                                <table class="table table-striped b-t b-b table-success" id="tableok">
+                                <table class="table table-striped b-t b-b table-dark" id="tableok">
                                     <thead>
                                         <tr>
                                             <th>Nama Cabang</th>
@@ -57,7 +72,7 @@
 
                             </div>
                         </div>
-                        <div class="col-md-5 d-flex align-items-stretch mt-5">
+                        <div class="col-md d-flex align-items-stretch mt-5">
                             <iframe src="https://maps.google.com/maps?q=Blk.%20F,%20Jl.%20Boulevard%20Bintaro%20Jaya%20Blok%20F,%20Pd.%20Jaya,%20Kec.%20Pd.%20Aren,%20Kota%20Tangerang%20Selatan,%20Banten%2015220&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="2"
                                   style="border:2" allowfullscreen></iframe>
                         </div>
@@ -110,6 +125,6 @@
             </div>
         </div>
     </div>
-</section>
+{{--</section>--}}
 
 @stop

@@ -89,7 +89,7 @@
                          <div class="text">
                              <h3 class="heading"><a href="https://www.caranddriver.com/news/a42394761/2023-honda-accord-price/">2023 Honda Accord Prices Are Up, but Not by Much</a></h3>
                              <div class="meta">
-                                 <div><a href="#"><span class="icon-calendar"></span> Jan. 4, 2023</a></div>
+                                 <div><a href="#"><snfpan class="icon-calendar"></snfpan> Jan. 4, 2023</a></div>
                                  <div><a href="#"><span class="icon-person"></span> Admin</a></div>
                                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                              </div>
@@ -97,16 +97,19 @@
                      </div>
                  </div>
                  <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-                     <h2 class="footer-heading d-flex align-items-center"><span
-                             class="icon d-flex align-items-center justify-content-center"><i
-                                 class="ion-ios-document"></i></span>Information</h2>
-                     <ul class="list-unstyled">
-                         <li><a href="#" class="py-1 d-block">About</a></li>
-                         <li><a href="#" class="py-1 d-block">Products</a></li>
-                         <li><a href="#" class="py-1 d-block">Blog</a></li>
-                         <li><a href="#" class="py-1 d-block">Contact</a></li>
-                         <li><a href="#" class="py-1 d-block">Help &amp; Support</a></li>
-                     </ul>
+                     <h2 class="footer-heading "><span
+                             class=""><i
+                                 class="ion-ios-document">&nbsp;&nbsp;</i></span>Information</h2>
+                                 <div class="col-md">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#" class="py-1 d-block">About</a></li>
+                                        <li><a href="#" class="py-1 d-block">Products</a></li>
+                                        {{-- <li><a href="#" class="py-1 d-block">Blog</a></li> --}}
+                                        <li><a href="#" class="py-1 d-block">Contact</a></li>
+                                        {{-- <li><a href="#" class="py-1 d-block">Help &amp; Support</a></li> --}}
+                                    </ul>
+                                 </div>
+                     
                  </div>
                  <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
                      <h2 class="footer-heading d-flex align-items-center"><span

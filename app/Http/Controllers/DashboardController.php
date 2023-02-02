@@ -19,5 +19,38 @@ class DashboardController extends Controller
         return view('web.dashboard',compact('cars','manual','matic','banner'));
     }
 
-    
+    public function mobilMatic(){
+        $cars = Car::where("type_car","=","Matic")->get();
+        return view("web.matic",["cars"=>$cars]);
+    }
+
+    public function mobilManual(){
+        $cars = Car::where("type_car","=","Manual")->get();
+        return view("web.manual",["cars"=>$cars]);
+    }
+
+    public function allCars(){
+        $cars = Car::all();
+        return view("web.allcars",["cars"=>$cars]);
+    }
+
+    public function search_products(Request $request)
+    {
+        $all_products = Car::whereBetween('day_price',[$request->left_value, $request->right_value])->get();
+        return view('search_result',compact('all_products'))->render();
+    }
+
+    public function sort_by(Request $request)
+    {
+        if($request->sort_by == 'lowest_price'){
+            $all_products = Car::orderBy('day_price','asc')->get();
+        }
+        if($request->sort_by == 'highest_price'){
+            $all_products = Car::orderBy('day_price','desc')->get();
+        }
+        return view('search_result',compact('all_products'))->render();
+
+    }
+
+
 }

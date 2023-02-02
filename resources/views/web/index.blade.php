@@ -1,13 +1,13 @@
 @extends('web.waras')
-{{-- @foreach ($viewproduct as $v)
-@section('title',$v->product_meta_title)
-@section('description',$v->product_meta_description)
-@section('keywords',$v->product_meta_keywords)
-@endforeach --}}
+{{-- @foreach ($viewproduct as $v) --}}
+@section('title',$viewproduct["product_meta_title"])
+@section('description',$viewproduct["product_meta_description"])
+@section('keywords',$viewproduct["product_meta_keywords"])
+{{-- @endforeach --}}
 @section('content')
     <!-- Banner Here -->
     <div class="banner header-text">
-        <div class="owl-banner owl-carousel">            
+        <div class="owl-banner owl-carousel">
             @foreach ($bannerhome as $bh)
                 <div class="banner-item" style="background-image: url({{ asset($bh->image) }});">
                     <div class="text-content">
@@ -53,10 +53,9 @@
             @foreach ($cars as $car)
                 @php $data = $modelT->cek_booked($car->id); @endphp
                 @if ($car->status_id == 1)
-                    <div class="col-md my-2">
+                    <div class="col-md-2 my-2">
                         <div class="card">
-                            <img class="zoom_01" src="{{ $car->img_car }}" style="height: 100%; width: 100%"
-                                data-zoom-image="{{ $car->img_car }}" />
+{{--                            <img cl®om-image="{{ $car->img_car }}" />--}}
                             <div class="card-body">
                                 <div class="pull-left">
                                     <p>Nama : </p> <b>{{ $car->name_car }}</b>

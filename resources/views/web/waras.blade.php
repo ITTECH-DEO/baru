@@ -74,10 +74,10 @@
                     <a class="nav-link" href="/">Home
                       <span class="sr-only">(current)</span>
                     </a>
-                 </li>  
+                 </li>
 
-                        <li class="nav-item {{ Request::is('homepage*') ? 'active' : '' }}"><a class="nav-link"
-                                href="/homepage">Cars</a></li>
+{{--                        <li class="nav-item {{ Request::is('homepage*') ? 'active' : '' }}"><a class="nav-link"--}}
+{{--                                href="/homepage">Cars</a></li>--}}
 
                         <li class="nav-item {{ Request::is('aboutUs*') ? 'active' : '' }}"><a class="nav-link"
                                 href="/aboutUs">About Us</a></li>
@@ -107,12 +107,12 @@
 
     </div> --}}
     @yield('content')
-    
+
     {{-- <div class="container-fluid"> --}}
     @include('web.footer')
     {{-- </div> --}}
-    
-   
+
+
 
     {{-- <div class="container-fluid"> --}}
     {{-- @include('web.footer') --}}
@@ -125,11 +125,90 @@
     <!-- Bootstrap core JavaScript -->
     <script src="{{ url('web/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ url('web/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      const input_left = document.getElementById("input_left");
+      const input_right = document.getElementById("input_right");
+
+      const thumb_left = document.querySelector(".slider > .thumb.left");
+      const thumb_right = document.querySelector(".slider > .thumb.right");
+      const range = document.querySelector(".slider > .range");
+
+    const set_left_value = () => {
+    const _this = input_left;
+    const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+
+    _this.value = Math.min(parseInt(_this.value), parseInt(input_right.value) - 1);
+
+    const percent = ((_this.value - min) / (max - min)) * 100;
+    thumb_left.style.left = percent + "%";
+    range.style.left = percent + "%";
+};
+
+    const set_right_value = () => {
+    const _this = input_right;
+    const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+
+    _this.value = Math.max(parseInt(_this.value), parseInt(input_left.value) + 1);
+
+    const percent = ((_this.value - min) / (max - min)) * 100;
+    thumb_right.style.right = 100 - percent + "%";
+    range.style.right = 100 - percent + "%";
+};
+
+input_left.addEventListener("input", set_left_value);
+input_right.addEventListener("input", set_right_value);
+
+  function left_slider(value) {
+    document.getElementById('left_value').innerHTML = value;
+}
+  function right_slider(value) {
+    document.getElementById('right_value').innerHTML = value;
+}
+    </script>
+
+<script>
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+</script>
+<script>
+  $(document).ready(function(e){
+     $('.range_slider').on('change',function(){
+         let left_value = $('#input_left').val();
+         let right_value = $('#input_right').val();
+         // alert(left_value+right_value);
+         $.ajax({
+             url:"{{ route('search.products') }}",
+             method:"GET",
+             data:{left_value:left_value, right_value:right_value},
+             success:function(res){
+                $('.search-result').html(res);
+             }
+         });
+     });
+
+     $('#sort_by').on('change',function(){
+         let sort_by = $('#sort_by').val();
+         $.ajax({
+             url:"{{ route('sort.by') }}",
+             method:"GET",
+             data:{sort_by:sort_by},
+             success:function(res){
+                 $('.search-result').html(res);
+             }
+         });
+     });
+  })
+</script>
 
     <script>
         $(document).ready(function() {
-          
-    
+
+
           $('#btn1').on("click", function(e) {
 
               // var link = $(this);
@@ -173,6 +252,7 @@
     <!-- Additional Scripts -->
     <script src="{{ url('web/assets/js/custom.js') }}"></script>
     <script src="{{ url('web/assets/js/owl.js') }}"></script>
+    
 
 
 

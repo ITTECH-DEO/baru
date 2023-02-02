@@ -64,6 +64,9 @@ Route::post('/store-meta',[MetaController::class,'storemeta'])->name('store.meta
 Route::get('/homepage/{id}',[WebController::class,'index']);
 
 Route::get('/', [DashboardController::class, 'index']);
+Route::get("/mobil-matic",[DashboardController::class, 'mobilMatic']);
+Route::get("/mobil-manual",[DashboardController::class, 'mobilManual']);
+Route::get("/all-cars",[DashboardController::class, 'allCars']);
 Route::get('aboutUs', [AboutUsWebController::class, 'indexWeb'])->name('about');
 Route::get('aboutUsAdm', [AboutUsController::class, 'indexAdm'])->name('about.adm')->middleware('checkRole:admin');
 Route::get('/about_delete/{id}', [AboutUsController::class, 'delete'])->middleware('checkRole:admin')->middleware('checkRole:admin');
@@ -143,3 +146,7 @@ Route::post("/leaderboard-admin-input" , [LeaderboardController::class, 'input']
 
 
 Route::get("/leaderboard" , [LeaderboardController::class, 'marketing_index'])->name("leaderboard.index");
+
+//search
+Route::get('/search-product',[DashboardController::class,'search_products'])->name('search.products');
+Route::get('/sort-by',[DashboardController::class,'sort_by'])->name('sort.by');

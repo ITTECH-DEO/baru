@@ -1,5 +1,9 @@
 @extends('web.waras')
 
+@section("style")
+    <link rel="stylesheet" href="{{url("css/jquery.jqZoom.css")}}" />
+@stop
+
 @section("content")
 
    <!-- Page Content -->
@@ -30,7 +34,10 @@
                <div class="col-md">
                        <div>
                            <br>
+                           <div class="zoom-box">
+
                            <img src="{{ url($car['img_car']) }}" alt="" class="img-thumbnail wc-image zoom_01">
+                           </div>
                        </div>
                    <br>
                </div>
@@ -39,7 +46,10 @@
                    <div class="col-md">
                        <div>
                            <br>
+                           <div class="zoom-box">
+
                            <img src="{{ url($car->img_car2) }}" alt="" id="myImg" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+                           </div>
                        </div>
                </div>
                    @endif
@@ -48,7 +58,9 @@
                    <div class="col-md">
                    <div>
                        <br>
+                       <div class="zoom-box">
                        <img src="{{ url($car->img_car3) }}" alt="" id="myImg2" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+                       </div>
                    </div>
                    </div>
                    @else
@@ -58,7 +70,9 @@
                    <div class="col-md">
                        <div>
                            <br>
+                           <div class="zoom-box">
                            <img src="{{ url($car->img_car4) }}" alt="" id="myImg3" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+                           </div>
                        </div>
                </div>
                    @endif
@@ -73,7 +87,9 @@
             <div class="col-md">
         <div>
             <br>
+            <div class="zoom-box">
             <img src="{{ url($car->img_car_lainnya1) }}" alt="" id="anot1" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+            </div>
         </div>
             </div>
     @endif
@@ -82,7 +98,9 @@
             <div class="col-md">
         <div>
             <br>
+            <div class="zoom-box">
             <img src="{{ url($car->img_car_lainnya2) }}" alt="" id="anot2" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+            </div>
         </div>
             </div>
     @endif
@@ -91,7 +109,9 @@
             <div class="col-md">
         <div>
             <br>
+            <div class="zoom-box">
             <img src="{{ url($car->img_car_lainnya3) }}" alt="" id="anot3" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+            </div>
         </div>
             </div>
     @endif
@@ -100,7 +120,9 @@
             <div class="col-md">
         <div>
             <br>
+            <div class="zoom-box">
             <img src="{{ url($car->img_car_lainnya4) }}" alt="" id="anot4" class="img-thumbnail wc-image zoom_01" style="display:none ;">
+            </div>
         </div>
             </div>
     @endif
@@ -429,3 +451,18 @@
    </div>
 
    @stop
+
+@section("script")
+    <script src="{{url("js/jquery.jqZoom.js")}}"></script>
+    <script>
+        $(function(){
+            $("img").jqZoom({
+                selectorWidth: 30,
+                selectorHeight: 30,
+                viewerWidth: 400,
+                viewerHeight: 300
+            });
+        })
+    </script>
+{{--    <script src="/path/to/cdn/jquery.min.js"></script>--}}
+@stop
