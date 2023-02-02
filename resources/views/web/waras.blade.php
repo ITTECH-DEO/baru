@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
-    <link rel="canonical" href="{{url()->current()}}"/>
+    <link rel="canonical" href="{{ url()->current() }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="author" content="">
     <link rel="icon" href="assets/images/favicon.ico">
@@ -28,7 +28,7 @@
 
 
     @yield('style')
-     {{-- <!-- Bootstrap core CSS -->
+    {{-- <!-- Bootstrap core CSS -->
      <link href=" {{url('cyborg/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
      <!-- Additional CSS Files -->
      <link rel="stylesheet" href="{{url('cyborg/assets/css/templatemo-cyborg-gaming.css')}}">
@@ -38,7 +38,7 @@
 
 </head>
 
-  <body>
+<body>
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -51,33 +51,34 @@
 
     <!-- Header -->
     <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <div class="logo-image">
-            <img src="{{asset("web/assets/images/KT88 Orange.png")}}" class="img-fluid">
-      </div>
-      <style>
-         .logo-image{
-    width: 100px;
-    height: 50px;
-    border-radius: 1%;
-    overflow: hidden;
-    margin-top: -6px;
-}
-      </style>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                 <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-                    <a class="nav-link" href="/">Home
-                      <span class="sr-only">(current)</span>
-                    </a>
-                 </li>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="logo-image">
+                    <img src="{{ asset('web/assets/images/KT88 Orange.png') }}" class="img-fluid">
+                </div>
+                <style>
+                    .logo-image {
+                        width: 100px;
+                        height: 50px;
+                        border-radius: 1%;
+                        overflow: hidden;
+                        margin-top: -6px;
+                    }
+                </style>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+                            <a class="nav-link" href="/">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
 
-{{--                        <li class="nav-item {{ Request::is('homepage*') ? 'active' : '' }}"><a class="nav-link"--}}
-{{--                                href="/homepage">Cars</a></li>--}}
+                        {{--                        <li class="nav-item {{ Request::is('homepage*') ? 'active' : '' }}"><a class="nav-link" --}}
+                        {{--                                href="/homepage">Cars</a></li> --}}
 
                         <li class="nav-item {{ Request::is('aboutUs*') ? 'active' : '' }}"><a class="nav-link"
                                 href="/aboutUs">About Us</a></li>
@@ -128,121 +129,97 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-      const input_left = document.getElementById("input_left");
-      const input_right = document.getElementById("input_right");
+        const input_left = document.getElementById("input_left");
+        const input_right = document.getElementById("input_right");
 
-      const thumb_left = document.querySelector(".slider > .thumb.left");
-      const thumb_right = document.querySelector(".slider > .thumb.right");
-      const range = document.querySelector(".slider > .range");
+        const thumb_left = document.querySelector(".slider > .thumb.left");
+        const thumb_right = document.querySelector(".slider > .thumb.right");
+        const range = document.querySelector(".slider > .range");
 
-    const set_left_value = () => {
-    const _this = input_left;
-    const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+        const set_left_value = () => {
+            const _this = input_left;
+            const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
 
-    _this.value = Math.min(parseInt(_this.value), parseInt(input_right.value) - 1);
+            _this.value = Math.min(parseInt(_this.value), parseInt(input_right.value) - 1);
 
-    const percent = ((_this.value - min) / (max - min)) * 100;
-    thumb_left.style.left = percent + "%";
-    range.style.left = percent + "%";
-};
+            const percent = ((_this.value - min) / (max - min)) * 100;
+            thumb_left.style.left = percent + "%";
+            range.style.left = percent + "%";
+        };
 
-    const set_right_value = () => {
-    const _this = input_right;
-    const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+        const set_right_value = () => {
+            const _this = input_right;
+            const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
 
-    _this.value = Math.max(parseInt(_this.value), parseInt(input_left.value) + 1);
+            _this.value = Math.max(parseInt(_this.value), parseInt(input_left.value) + 1);
 
-    const percent = ((_this.value - min) / (max - min)) * 100;
-    thumb_right.style.right = 100 - percent + "%";
-    range.style.right = 100 - percent + "%";
-};
+            const percent = ((_this.value - min) / (max - min)) * 100;
+            thumb_right.style.right = 100 - percent + "%";
+            range.style.right = 100 - percent + "%";
+        };
 
-input_left.addEventListener("input", set_left_value);
-input_right.addEventListener("input", set_right_value);
 
-  function left_slider(value) {
-    document.getElementById('left_value').innerHTML = value;
-}
-  function right_slider(value) {
-    document.getElementById('right_value').innerHTML = value;
-}
+        if (input_left)
+            input_left.addEventListener("input", set_left_value);
+        if (input_right)
+            input_right.addEventListener("input", set_right_value);
+
+        function left_slider(value) {
+            document.getElementById('left_value').innerHTML = value;
+        }
+
+        function right_slider(value) {
+            document.getElementById('right_value').innerHTML = value;
+        }
     </script>
 
-<script>
-  $.ajaxSetup({
-      headers: {
-          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
-  });
-</script>
-<script>
-  $(document).ready(function(e){
-     $('.range_slider').on('change',function(){
-         let left_value = $('#input_left').val();
-         let right_value = $('#input_right').val();
-         // alert(left_value+right_value);
-         $.ajax({
-             url:"{{ route('search.products') }}",
-             method:"GET",
-             data:{left_value:left_value, right_value:right_value},
-             success:function(res){
-                $('.search-result').html(res);
-             }
-         });
-     });
-
-     $('#sort_by').on('change',function(){
-         let sort_by = $('#sort_by').val();
-         $.ajax({
-             url:"{{ route('sort.by') }}",
-             method:"GET",
-             data:{sort_by:sort_by},
-             success:function(res){
-                 $('.search-result').html(res);
-             }
-         });
-     });
-  })
-</script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+    
 
     <script>
         $(document).ready(function() {
 
 
-          $('#btn1').on("click", function(e) {
+            $('#btn1').on("click", function(e) {
 
-              // var link = $(this);
-              // console.log(link.text())
-              //
-              // if (link.text() == "Show More"){
-              //     link.text('Show Less');
-              // }else{
-              //     link.text('Show More');
-              // }
+                // var link = $(this);
+                // console.log(link.text())
+                //
+                // if (link.text() == "Show More"){
+                //     link.text('Show Less');
+                // }else{
+                //     link.text('Show More');
+                // }
 
-              // $('.showpanel').slideToggle('slow', function() {
-              //     if ($(this).is(':visible')) {
-              //         link.text('close');
-              //     } else {
-              //         link.text('open');
-              //     }
-              // });
+                // $('.showpanel').slideToggle('slow', function() {
+                //     if ($(this).is(':visible')) {
+                //         link.text('close');
+                //     } else {
+                //         link.text('open');
+                //     }
+                // });
 
-              $('#myImg').toggle('slow');
-              $('#myImg2').toggle('slow');
-              $('#myImg3').toggle('slow');
-              $('#myImg4').toggle('slow');
-              $('#anot1').toggle('slow');
-              $('#anot2').toggle('slow');
-              $('#anot3').toggle('slow');
-              $('#anot4').toggle('slow');
-             //  $('#anot2').toggle('slow');
-             //  $('#anot2').toggle('slow');
-             //  $('#anot2').toggle('slow');
-             //  $('#anot2').toggle('slow');
-             //  $('#anot2').toggle('slow');
-          });
-      });
+                $('#myImg').toggle('slow');
+                $('#myImg2').toggle('slow');
+                $('#myImg3').toggle('slow');
+                $('#myImg4').toggle('slow');
+                $('#anot1').toggle('slow');
+                $('#anot2').toggle('slow');
+                $('#anot3').toggle('slow');
+                $('#anot4').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
+                //  $('#anot2').toggle('slow');
+            });
+        });
     </script>
 
 
@@ -252,7 +229,7 @@ input_right.addEventListener("input", set_right_value);
     <!-- Additional Scripts -->
     <script src="{{ url('web/assets/js/custom.js') }}"></script>
     <script src="{{ url('web/assets/js/owl.js') }}"></script>
-    
+
 
 
 
