@@ -7,18 +7,18 @@
          <link rel="stylesheet" href="{{ url('web/assets/css/ionicons.min.css') }}">
          <link rel="stylesheet" href="{{ url('web/assets/css/style1.css') }}">
          <style>
-     
+
             .aspect-16to9 {
          height: auto;
          width: 100%;
        }
-       
+
        .p-16to9 {
          position: relative;
          padding-bottom: 56%;
          overflow: hidden;
        }
-       
+
        .card-body-content {
          position: absolute;
          top: 1rem;
@@ -109,7 +109,7 @@
                                         {{-- <li><a href="#" class="py-1 d-block">Help &amp; Support</a></li> --}}
                                     </ul>
                                  </div>
-                     
+
                  </div>
                  <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
                      <h2 class="footer-heading d-flex align-items-center"><span
@@ -190,7 +190,7 @@
      <!-- Additional Scripts -->
      <script src="{{ url('web/assets/js/custom.js') }}"></script>
      <script src="{{ url('web/assets/js/owl.js') }}"></script>
-     
+
      <script type="text/javascript">
          function submitForm() {
              $('#muter_beh').show();
@@ -201,12 +201,12 @@
          }
      </script>
      <script>
-         $(".zoom_01").elevateZoom({
-             easing: true
-         });
-         
+        //  $(".zoom_01").elevateZoom({
+        //      easing: true
+        //  });
 
-       
+
+
      </script>
  {{-- </body>
 
