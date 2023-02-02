@@ -180,41 +180,7 @@
             }
         });
     </script>
-    <script>
-        $(document).ready(function(e) {
-            $('.range_slider').on('change', function() {
-                let left_value = $('#input_left').val();
-                let right_value = $('#input_right').val();
-                // alert(left_value+right_value);
-                $.ajax({
-                    url: "{{ route('search.products') }}",
-                    method: "GET",
-                    data: {
-                        left_value: left_value,
-                        right_value: right_value
-                    },
-                    success: function(res) {
-                        console.log(res);
-                        $('.search-result').html(res);
-                    }
-                });
-            });
-
-            $('#sort_by').on('change', function() {
-                let sort_by = $('#sort_by').val();
-                $.ajax({
-                    url: "{{ route('sort.by') }}",
-                    method: "GET",
-                    data: {
-                        sort_by: sort_by
-                    },
-                    success: function(res) {
-                        $('.search-result').html(res);
-                    }
-                });
-            });
-        })
-    </script>
+    
 
     <script>
         $(document).ready(function() {

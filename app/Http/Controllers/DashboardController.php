@@ -42,21 +42,25 @@ class DashboardController extends Controller
     public function search_products(Request $request)
     {
 
-        $all_products = Car::whereBetween('day_price', [(int)$request->left_value, (int) $request->right_value])->get();
-        return response()->json($all_products);
-        // return view('search_result', compact('all_products'))->render();
+        $cars = Car::whereBetween('day_price', [(int)$request->left_value, (int) $request->right_value])->get();
+        $returnHTML = view('web.search_result', compact('cars'))->render();
+        return response()->json(array('success' => true, 'html' => $returnHTML));
+        // return response()->json($cars);
+        // return view('search_result', compact('cars'))->render();
     }
 
     public function sort_by(Request $request)
     {
         if ($request->sort_by == 'lowest_price') {
-            $all_products = Car::orderBy('day_price', 'asc')->get();
+            $cars = Car::orderBy('day_price', 'asc')->get();
         }
         if ($request->sort_by == 'highest_price') {
-            $all_products = Car::orderBy('day_price', 'desc')->get();
-
-        }
-        return response()->json($all_products);
-        // return view('search_result', compact('all_products'))->render();
+            $cars = Car::orderBy('day_price', 'desc')->get();
+        } else
+            $cars = Car::with('vendor')->orderBy('updated_at', 'DESC')->take(6)->get();
+        $returnHTML = view('web.search_result', compact('cars'))->render();
+        return response()->json(array('success' => true, 'html' => $returnHTML));
+        // return response()->json($cars);
+        // return view('search_result', compact('cars'))->render();
     }
 }
