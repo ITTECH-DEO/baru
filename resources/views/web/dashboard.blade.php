@@ -23,7 +23,7 @@
         }
     </style>
 
-    
+
 @stop
 
 @section('content')
@@ -47,25 +47,29 @@
 
     {{-- AWAL BAGIAN --}}
 
-    
-          
-     
+
+
+
     <div class="latest-products">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
                         <h2 style="font-weight: bold"><span style="color: orange">Rekomendasi</span> Mobil</h2>
-                            <div class="form-group mx-sm-3 mb-2">
-                              <label for="inputPassword2" class="sr-only">Search Product</label>
-                              <form action="/" method="GET" class="form-inline justify-content-center">
-                              <input type="search" class="form-control" id="search" placeholder="Search Product" name="search">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="inputPassword2" class="sr-only">Search Product</label>
+                            <form action="/" method="GET" class="form-inline justify-content-center">
+                                <input type="search" class="form-control" id="search" placeholder="Search Product"
+                                    name="search">
+                                <input type="number" class="form-control" id="min" placeholder="" name="min">
+                                <input type="number" class="form-control" id="max" placeholder="" name="max">
+                                <button type="submit">Filter</button>
                             </form>
-                            </div>
-                          
+                        </div>
+
                         <div class="col-md-5 mb-3">
                             <div class="middle">
-                                <div id="multi_range">
+                                {{-- <div id="multi_range">
                                     <span id="left_value">{{ $carPriceMin }}</span><span> ~ </span><span
                                         id="right_value">{{ $carPriceMax }}</span>
                                 </div>
@@ -80,7 +84,8 @@
                                         <div class="thumb left"></div>
                                         <div class="thumb right"></div>
                                     </div>
-                                </div>
+                                </div> --}}
+
                             </div>
                         </div>
                         <div class="col-md-5 mt-1 pt-1">
@@ -222,74 +227,74 @@
             </div>
         </div>
     </div>
-    
+
 
     {{-- AKHIR BAGIAN --}}
 @stop
 @section('script')
     <script>
-        const input_left = document.getElementById("input_left");
-        const input_right = document.getElementById("input_right");
+        // const input_left = document.getElementById("input_left");
+        // const input_right = document.getElementById("input_right");
 
-        const thumb_left = document.querySelector(".slider > .thumb.left");
-        const thumb_right = document.querySelector(".slider > .thumb.right");
-        const range = document.querySelector(".slider > .range");
+        // const thumb_left = document.querySelector(".slider > .thumb.left");
+        // const thumb_right = document.querySelector(".slider > .thumb.right");
+        // const range = document.querySelector(".slider > .range");
 
-        const set_left_value = () => {
-            const _this = input_left;
-            const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+        // const set_left_value = () => {
+        //     const _this = input_left;
+        //     const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
 
-            _this.value = Math.min(parseInt(_this.value), parseInt(input_right.value) - 1);
+        //     _this.value = Math.min(parseInt(_this.value), parseInt(input_right.value) - 1);
 
-            const percent = ((_this.value - min) / (max - min)) * 100;
-            thumb_left.style.left = percent + "%";
-            range.style.left = percent + "%";
-        };
+        //     const percent = ((_this.value - min) / (max - min)) * 100;
+        //     thumb_left.style.left = percent + "%";
+        //     range.style.left = percent + "%";
+        // };
 
-        const set_right_value = () => {
-            const _this = input_right;
-            const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
+        // const set_right_value = () => {
+        //     const _this = input_right;
+        //     const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
 
-            _this.value = Math.max(parseInt(_this.value), parseInt(input_left.value) + 1);
+        //     _this.value = Math.max(parseInt(_this.value), parseInt(input_left.value) + 1);
 
-            const percent = ((_this.value - min) / (max - min)) * 100;
-            thumb_right.style.right = 100 - percent + "%";
-            range.style.right = 100 - percent + "%";
-        };
+        //     const percent = ((_this.value - min) / (max - min)) * 100;
+        //     thumb_right.style.right = 100 - percent + "%";
+        //     range.style.right = 100 - percent + "%";
+        // };
 
 
-        if (input_left)
-            input_left.addEventListener("input", set_left_value);
-        if (input_right)
-            input_right.addEventListener("input", set_right_value);
+        // if (input_left)
+        //     input_left.addEventListener("input", set_left_value);
+        // if (input_right)
+        //     input_right.addEventListener("input", set_right_value);
 
-        function left_slider(value) {
-            document.getElementById('left_value').innerHTML = value;
-        }
+        // function left_slider(value) {
+        //     document.getElementById('left_value').innerHTML = value;
+        // }
 
-        function right_slider(value) {
-            document.getElementById('right_value').innerHTML = value;
-        }
+        // function right_slider(value) {
+        //     document.getElementById('right_value').innerHTML = value;
+        // }
     </script>
     <script>
         $(document).ready(function(e) {
-            $('.range_slider').on('change', function() {
-                let left_value = $('#input_left').val();
-                let right_value = $('#input_right').val();
-                // alert(left_value+right_value);
-                $.ajax({
-                    url: "{{ route('search.products') }}",
-                    method: "GET",
-                    data: {
-                        left_value: left_value,
-                        right_value: right_value
-                    },
-                    success: function(res) {
-                        console.log(res);
-                        $('.search-result').html(res.html);
-                    }
-                });
-            });
+            // $('.range_slider').on('change', function() {
+            //     let left_value = $('#input_left').val();
+            //     let right_value = $('#input_right').val();
+            //     // alert(left_value+right_value);
+            //     $.ajax({
+            //         url: "{{ route('search.products') }}",
+            //         method: "GET",
+            //         data: {
+            //             left_value: left_value,
+            //             right_value: right_value
+            //         },
+            //         success: function(res) {
+            //             console.log(res);
+            //             $('.search-result').html(res.html);
+            //         }
+            //     });
+            // });
 
             $('#sort_by').on('change', function() {
                 let sort_by = $('#sort_by').val();
