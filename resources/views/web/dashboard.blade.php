@@ -70,9 +70,9 @@
                                         id="right_value">{{ $carPriceMax }}</span>
                                 </div>
                                 <div class="multi-range-slider my-2">
-                                    <input type="range" id="input_left" class="range_slider" value="{{ $carPriceMin }}"
+                                    <input type="search" id="input_left" class="form-control" value="{{ $carPriceMin }}"
                                         onmousemove="left_slider(this.value)">
-                                    <input type="range" id="input_right" class="range_slider" value="{{ $carPriceMax }}"
+                                    <input type="search" id="input_right" class="form-control" value="{{ $carPriceMax }}"
                                         onmousemove="right_slider(this.value)">
                                     <div class="slider">
                                         <div class="track"></div>
