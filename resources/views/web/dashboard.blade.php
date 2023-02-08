@@ -22,6 +22,8 @@
 
         }
     </style>
+
+    
 @stop
 
 @section('content')
@@ -45,48 +47,53 @@
 
     {{-- AWAL BAGIAN --}}
 
-    <div class="container">
-        <div class="slider-area">
-            <div class="col-md-5 mb-3">
-                <div class="middle">
-                    <div id="multi_range">
-                        <span id="left_value">{{ $carPriceMin }}</span><span> ~ </span><span
-                            id="right_value">{{ $carPriceMax }}</span>
-                    </div>
-                    <div class="multi-range-slider my-2">
-                        <input type="range" id="input_left" class="range_slider" value="{{ $carPriceMin }}"
-                            onmousemove="left_slider(this.value)">
-                        <input type="range" id="input_right" class="range_slider" value="{{ $carPriceMax }}"
-                            onmousemove="right_slider(this.value)">
-                        <div class="slider">
-                            <div class="track"></div>
-                            <div class="range"></div>
-                            <div class="thumb left"></div>
-                            <div class="thumb right"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 mt-4 pt-2">
-                <div class="middle">
-                    <div class="multi-range-slider my-2">
-                        <select name="sort_by" id="sort_by" class="form-control">
-                            <option value="">Sort By</option>
-                            <option value="highest_price">Highest Price</option>
-                            <option value="lowest_price">Lowest Price</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
+          
+     
     <div class="latest-products">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
                         <h2 style="font-weight: bold"><span style="color: orange">Rekomendasi</span> Mobil</h2>
+                            <div class="form-group mx-sm-3 mb-2">
+                              <label for="inputPassword2" class="sr-only">Search Product</label>
+                              <form action="/" method="GET" class="form-inline justify-content-center">
+                              <input type="search" class="form-control" id="search" placeholder="Search Product" name="search">
+                            </form>
+                            </div>
+                          
+                        <div class="col-md-5 mb-3">
+                            <div class="middle">
+                                <div id="multi_range">
+                                    <span id="left_value">{{ $carPriceMin }}</span><span> ~ </span><span
+                                        id="right_value">{{ $carPriceMax }}</span>
+                                </div>
+                                <div class="multi-range-slider my-2">
+                                    <input type="range" id="input_left" class="range_slider" value="{{ $carPriceMin }}"
+                                        onmousemove="left_slider(this.value)">
+                                    <input type="range" id="input_right" class="range_slider" value="{{ $carPriceMax }}"
+                                        onmousemove="right_slider(this.value)">
+                                    <div class="slider">
+                                        <div class="track"></div>
+                                        <div class="range"></div>
+                                        <div class="thumb left"></div>
+                                        <div class="thumb right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 mt-1 pt-1">
+                            <div class="middle">
+                                <div class="multi-range-slider my-2">
+                                    <select name="sort_by" id="sort_by" class="form-control">
+                                        <option value="">Sort By</option>
+                                        <option value="highest_price">Highest Price</option>
+                                        <option value="lowest_price">Lowest Price</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                         <a href="/all-cars">view more <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
@@ -215,6 +222,7 @@
             </div>
         </div>
     </div>
+    
 
     {{-- AKHIR BAGIAN --}}
 @stop

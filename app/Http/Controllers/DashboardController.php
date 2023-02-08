@@ -9,8 +9,16 @@ use JetBrains\PhpStorm\Internal\ReturnTypeContract;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        
+        if ($request->has('search')) {
+            $cars = Car::where('name_car','LIKE','%' . $request->search . '%')->get();
+            // dd($cars);
+        }else{
+            $cars = Car::all();
+        }
+
         $banners = Banner::all();
         $cars = Car::with('vendor')->orderBy('updated_at', 'DESC')->take(6)->get();
         $manual = Car::where("type_car", "=", "Manual")->with('vendor')->orderBy('updated_at', 'DESC')->take(6)->get();
@@ -65,4 +73,5 @@ class DashboardController extends Controller
         // return response()->json($cars);
         // return view('search_result', compact('cars'))->render();
     }
+
 }

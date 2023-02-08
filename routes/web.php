@@ -150,3 +150,5 @@ Route::get("/leaderboard" , [LeaderboardController::class, 'marketing_index'])->
 //search
 Route::get('/search-product',[DashboardController::class,'search_products'])->name('search.products');
 Route::get('/sort-by',[DashboardController::class,'sort_by'])->name('sort.by');
+
+//search product
