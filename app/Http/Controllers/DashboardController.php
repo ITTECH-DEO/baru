@@ -12,10 +12,16 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
 
-        if ($request->has('search')) {
-            $cars = Car::where('name_car','LIKE','%' . $request->search . '%')->with('vendor')->orderBy('updated_at', 'DESC')->get();
+        if (
+            $request->has('search')
+            || $request->has('min')
+            || $request->has('max')
+        ) {
+            $carPriceMin = Car::min('day_price');
+            $carPriceMax = Car::max('day_price');
+            $cars = Car::where('name_car', 'LIKE', '%' . ($request->search ?? '') . '%')->whereBetween('day_price', [($request->min ?? $carPriceMin), ($request->max ?? $carPriceMax)])->with('vendor')->orderBy('updated_at', 'DESC')->get();
             // dd($cars);
-        }else{
+        } else {
             $cars = Car::with('vendor')->orderBy('updated_at', 'DESC')->take(6)->get();
         }
 
@@ -24,11 +30,10 @@ class DashboardController extends Controller
         $manual = Car::where("type_car", "=", "Manual")->with('vendor')->orderBy('updated_at', 'DESC')->take(6)->get();
         $matic = Car::where("type_car", "=", "Matic")->with('vendor')->orderBy('updated_at', 'DESC')->take(6)->get();
         $banner = Banner::orderBy('updated_at', 'DESC')->latest()->get();
-        $carPriceMin = Car::min('day_price');
-        $carPriceMax = Car::max('day_price');
+
 
         // return $manual;
-        return view('web.dashboard', compact('cars', 'manual', 'matic', 'banner', 'carPriceMin', 'carPriceMax'));
+        return view('web.dashboard', compact('cars', 'manual', 'matic', 'banner', ));
     }
 
     public function mobilMatic()
@@ -73,5 +78,4 @@ class DashboardController extends Controller
         // return response()->json($cars);
         // return view('search_result', compact('cars'))->render();
     }
-
 }
