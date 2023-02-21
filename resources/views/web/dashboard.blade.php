@@ -20,60 +20,64 @@
             }
 
         }
+
         .btn-square-md {
-        width: 800px !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-        height: 100px !important;
-        text-align: center;
-        padding: 0px;
-        font-size: 30px !important;
-        color: white !important;
-        background-color: #F15006 !important;
-        border-radius: 50px !important;
-}
-.judul {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-    color:#F15006 !important; 
-}
+            width: 800px !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            height: 100px !important;
+            text-align: center;
+            padding: 0px;
+            font-size: 30px !important;
+            color: white !important;
+            background-color: #F15006 !important;
+            border-radius: 50px !important;
+        }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+        .judul {
+            display: block;
+            font-size: 1.5em;
+            margin-top: 0.83em;
+            margin-bottom: 0.83em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
+            color: #F15006 !important;
+        }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            margin-top: -20vh;
+            padding: 16px;
+            color: rgb(71, 71, 71);
+            font-weight: bold;
+            font-size: 10vw;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-   
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
     </style>
 @stop
 
@@ -91,10 +95,10 @@
                     </div>
                 @endforeach
             </div>
-            
+
+        </div>
     </div>
-    </div>
-    
+
 
     <!-- Banner Ends Here -->
 
@@ -114,14 +118,17 @@
                             <form action="/" method="GET" class="d-flex flex-column justify-content-center">
                                 <input type="search" class="form-control" id="search" placeholder="Search Product"
                                     name="search">
-                                    <br>
-                                 <div class="d-flex justify-content-center">
-                                    <input type="number" class="form-control" id="min" placeholder="Min" name="min">
+                                <br>
+                                <div class="d-flex justify-content-center">
+                                    <input type="number" class="form-control" id="min" placeholder="Min"
+                                        name="min">
                                     &nbsp;<h2> - </h2>&nbsp;
-                                    <input type="number" class="form-control" id="max" placeholder="Max" name="max">
-                                </div>   
-                               
-                                <button type="submit" class="btn btn-primary" style="background-color: #F15006; border-color:#F15006;">Filter</button>
+                                    <input type="number" class="form-control" id="max" placeholder="Max"
+                                        name="max">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary"
+                                    style="background-color: #F15006; border-color:#F15006;">Filter</button>
                             </form>
                         </div>
 
@@ -291,15 +298,17 @@
 @stop
 @section('script')
 
-<script>
-  $(document).ready(function(){
-  $( ".btn-square-md" ).click(function() {
-    var x = $(window).scrollTop();
-     $('html, body').animate({ scrollTop: x + 600 }) 
-  });
-});
-</script>
-   
+    <script>
+        $(document).ready(function() {
+            $(".btn-square-md").click(function() {
+                var x = $(window).scrollTop();
+                $('html, body').animate({
+                    scrollTop: x + 600
+                })
+            });
+        });
+    </script>
+
     <script>
         $(document).ready(function(e) {
             // $('.range_slider').on('change', function() {

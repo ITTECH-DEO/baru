@@ -24,21 +24,14 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{ url('web/assets/css/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ url('web/assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ url('web/assets/css/owl.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
 
     @yield('style')
-    {{-- <!-- Bootstrap core CSS -->
-     <link href=" {{url('cyborg/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-     <!-- Additional CSS Files -->
-     <link rel="stylesheet" href="{{url('cyborg/assets/css/templatemo-cyborg-gaming.css')}}">
-     <link rel="stylesheet" href="{{url('cyborg/assets/css/owl.css')}}">
-     <link rel="stylesheet" href="{{url('cyborg/assets/css/animate.css')}}">
-     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> --}}
+
 
 </head>
 
@@ -61,7 +54,7 @@
                     <img src="{{ asset('web/assets/images/KT88 White.png') }}" class="img-fluid">
                 </div>
                 <style>
-                    .logo-image { 
+                    .logo-image {
                         width: 100px;
                         height: 50px;
                         border-radius: 10%;
@@ -80,10 +73,6 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-
-                        {{--                        <li class="nav-item {{ Request::is('homepage*') ? 'active' : '' }}"><a class="nav-link" --}}
-                        {{--                                href="/homepage">Cars</a></li> --}}
-
                         <li class="nav-item {{ Request::is('aboutUs*') ? 'active' : '' }}"><a class="nav-link"
                                 href="/aboutUs">About Us</a></li>
 
@@ -97,43 +86,32 @@
             </div>
         </nav>
     </header>
-
-
-
-
-    <!-- Page Content -->
-    <!-- Banner Starts Here -->
-
-    <!-- Banner Ends Here -->
-    {{-- <div class="container-fluid">
-
-
-
-
-    </div> --}}
     @yield('content')
-
-    {{-- <div class="container-fluid"> --}}
     @include('web.footer')
-    {{-- </div> --}}
-
-
-
-    {{-- <div class="container-fluid"> --}}
-    {{-- @include('web.footer') --}}
-    {{-- </div> --}}
-
-
-
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ url('web/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ url('web/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url('dashboard/js/jquery.elevatezoom.js') }}"></script>
+    <script src="{{ url('web/assets/js/popper.js') }}"></script>
+    <script src="{{ url('web/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('web/assets/js/main1.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <!-- Additional Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{{ url('web/assets/js/custom.js') }}"></script>
 
-   
-
+    <script type="text/javascript">
+        function submitForm() {
+            $('#muter_beh').show();
+            $('#submit_form').hide();
+            setTimeout(function() {
+                window.location.href = "{{ url('/') }}";
+            }, 7000);
+        }
+    </script>
+    <script>
+        //  $(".zoom_01").elevateZoom({
+        //      easing: true
+        //  });
+    </script>
     <script>
         $.ajaxSetup({
             headers: {
@@ -149,22 +127,22 @@
 
             $('#btn1').on("click", function(e) {
 
-                // var link = $(this);
-                // console.log(link.text())
-                //
-                // if (link.text() == "Show More"){
-                //     link.text('Show Less');
-                // }else{
-                //     link.text('Show More');
-                // }
+                var link = $(this);
+                console.log(link.text())
 
-                // $('.showpanel').slideToggle('slow', function() {
-                //     if ($(this).is(':visible')) {
-                //         link.text('close');
-                //     } else {
-                //         link.text('open');
-                //     }
-                // });
+                if (link.text() == "Show More") {
+                    link.text('Show Less');
+                } else {
+                    link.text('Show More');
+                }
+
+                $('.showpanel').slideToggle('slow', function() {
+                    if ($(this).is(':visible')) {
+                        link.text('close');
+                    } else {
+                        link.text('open');
+                    }
+                });
 
                 $('#myImg').toggle('slow');
                 $('#myImg2').toggle('slow');
@@ -182,29 +160,6 @@
             });
         });
     </script>
-
-
-
-
-
-    <!-- Additional Scripts -->
-    <script src="{{ url('web/assets/js/custom.js') }}"></script>
-    <script src="{{ url('web/assets/js/owl.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
-
-    <!-- Bootstrap core JavaScript -->
-
-    {{-- {{-- <script src="{{ url('cyborg/vendor/jquery/jquery.min.js') }}"></script> --}}
-  {{-- <script src="{{ url('cyborg/vendor/bootstrap/js/bootstrap.min.js') }}"></script> --}}
-
-  {{-- <script src="{{ url('cyborg/assets/js/isotope.min.js') }}"></script> --}}
-  {{-- <script src="{{ url('cyborg/assets/js/owl-carousel.js') }}"></script> --}}
-  {{-- <script src="{{ url('cyborg/assets/js/tabs.js') }}"></script> --}}
-  {{-- <script src="{{ url('cyborg/assets/js/popup.js') }}"></script> --}}
-  {{-- <script src="{{ url('cyborg/assets/js/custom.js') }}"></script>  --}}
     @yield('script')
 
 </body>
