@@ -2961,14 +2961,14 @@
 	 * @todo Rename `slideBy` to `navBy`
 	 */
 	Navigation.Defaults = {
-		nav: false,
+		nav: true,
 		navText: [
 			'<span aria-label="' + 'Previous' + '">&#x2039;</span>',
 			'<span aria-label="' + 'Next' + '">&#x203a;</span>'
 		],
-		navSpeed: false,
+		navSpeed: true,
 		navElement: 'button type="button" role="presentation"',
-		navContainer: false,
+		navContainer: true,
 		navContainerClass: 'owl-nav',
 		navClass: [
 			'owl-prev',

@@ -19,29 +19,82 @@
                 /*background-color: black;*/
             }
 
-
         }
+        .btn-square-md {
+        width: 800px !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        height: 100px !important;
+        text-align: center;
+        padding: 0px;
+        font-size: 30px !important;
+        color: white !important;
+        background-color: #F15006 !important;
+        border-radius: 50px !important;
+}
+.judul {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    color:#F15006 !important; 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+   
     </style>
-
-
 @stop
 
 @section('content')
 
     <div class="banner header-text">
-        <div class="owl-banner owl-carousel">
-            @foreach ($banner as $b)
-                <div class="banner-item" style="background-image: url({{ asset($b->image) }});">
-                    <div class="text-content">
-                        <h4>Find your car today!</h4>
-                        <h2>Kt 88 Cars For U !</h2>
+        <div class="carousel-wrapper">
+            <div class="owl-banner owl-carousel ">
+                @foreach ($banner as $b)
+                    <div class="banner-item" style="background-image: url({{ asset($b->image) }});">
+                        <div class="text-content">
+                            <h2 class="judul">KT88 CARS !</h2>
+                            <button type="button" class="btn btn-secondary btn-square-md">Find your car today!</button>
+                        </div>
                     </div>
-                </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+            
     </div>
     </div>
-    </div>
+    
 
     <!-- Banner Ends Here -->
 
@@ -55,15 +108,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2 style="font-weight: bold"><span style="color: orange">Rekomendasi</span> Mobil</h2>
+                        <h2 style="font-weight: bold"><span style="color: #F15006">Rekomendasi</span> Mobil</h2>
                         <div class="form-group mx-sm-3 mb-2">
                             <label for="inputPassword2" class="sr-only">Search Product</label>
-                            <form action="/" method="GET" class="form-inline justify-content-center">
+                            <form action="/" method="GET" class="d-flex flex-column justify-content-center">
                                 <input type="search" class="form-control" id="search" placeholder="Search Product"
                                     name="search">
-                                <input type="number" class="form-control" id="min" placeholder="" name="min">
-                                <input type="number" class="form-control" id="max" placeholder="" name="max">
-                                <button type="submit">Filter</button>
+                                    <br>
+                                 <div class="d-flex justify-content-center">
+                                    <input type="number" class="form-control" id="min" placeholder="Min" name="min">
+                                    &nbsp;<h2> - </h2>&nbsp;
+                                    <input type="number" class="form-control" id="max" placeholder="Max" name="max">
+                                </div>   
+                               
+                                <button type="submit" class="btn btn-primary" style="background-color: #F15006; border-color:#F15006;">Filter</button>
                             </form>
                         </div>
 
@@ -145,12 +203,12 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2 style="font-weight: bold"><span style="color: orange">Mobil</span> Matic</h2>
+                        <h2 style="font-weight: bold"><span style="color: #F15006">Mobil</span> Matic</h2>
                         <a href="/mobil-matic">view more <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
                 @foreach ($matic as $car)
-                    <div class="col-lg-4 col-md-6 ">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 ">
                         <div class="product-item p-2 shadow rounded">
                             <a href="{{ route('car.detail', ['id' => $car['id']]) }}"><img class="rounded-lg"
                                     src="{{ url($car->img_car) }}" alt="NGeng Ngeng1"></a>
@@ -189,14 +247,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2 style="font-weight: bold"><span style="color: orange">Mobil</span> Manual</h2>
+                        <h2 style="font-weight: bold"><span style="color: #F15006">Mobil</span> Manual</h2>
                         <a href="/mobil-manual">view more <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
 
 
                 @foreach ($manual as $car)
-                    <div class="col-lg-4 col-md-6 ">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-6 ">
                         <div class="product-item p-2 shadow rounded">
                             <a href="{{ route('car.detail', ['id' => $car['id']]) }}"><img class="rounded-lg"
                                     src="{{ url($car->img_car) }}" alt="NGeng Ngeng1"></a>
@@ -232,50 +290,16 @@
     {{-- AKHIR BAGIAN --}}
 @stop
 @section('script')
-    <script>
-        // const input_left = document.getElementById("input_left");
-        // const input_right = document.getElementById("input_right");
 
-        // const thumb_left = document.querySelector(".slider > .thumb.left");
-        // const thumb_right = document.querySelector(".slider > .thumb.right");
-        // const range = document.querySelector(".slider > .range");
-
-        // const set_left_value = () => {
-        //     const _this = input_left;
-        //     const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
-
-        //     _this.value = Math.min(parseInt(_this.value), parseInt(input_right.value) - 1);
-
-        //     const percent = ((_this.value - min) / (max - min)) * 100;
-        //     thumb_left.style.left = percent + "%";
-        //     range.style.left = percent + "%";
-        // };
-
-        // const set_right_value = () => {
-        //     const _this = input_right;
-        //     const [min, max] = [parseInt(_this.min), parseInt(_this.max)];
-
-        //     _this.value = Math.max(parseInt(_this.value), parseInt(input_left.value) + 1);
-
-        //     const percent = ((_this.value - min) / (max - min)) * 100;
-        //     thumb_right.style.right = 100 - percent + "%";
-        //     range.style.right = 100 - percent + "%";
-        // };
-
-
-        // if (input_left)
-        //     input_left.addEventListener("input", set_left_value);
-        // if (input_right)
-        //     input_right.addEventListener("input", set_right_value);
-
-        // function left_slider(value) {
-        //     document.getElementById('left_value').innerHTML = value;
-        // }
-
-        // function right_slider(value) {
-        //     document.getElementById('right_value').innerHTML = value;
-        // }
-    </script>
+<script>
+  $(document).ready(function(){
+  $( ".btn-square-md" ).click(function() {
+    var x = $(window).scrollTop();
+     $('html, body').animate({ scrollTop: x + 600 }) 
+  });
+});
+</script>
+   
     <script>
         $(document).ready(function(e) {
             // $('.range_slider').on('change', function() {

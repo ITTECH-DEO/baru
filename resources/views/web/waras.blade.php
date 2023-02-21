@@ -26,6 +26,10 @@
     <link rel="stylesheet" href="{{ url('web/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('web/assets/css/owl.css') }}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 
     @yield('style')
     {{-- <!-- Bootstrap core CSS -->
@@ -54,15 +58,15 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <div class="logo-image">
-                    <img src="{{ asset('web/assets/images/KT88 Orange.png') }}" class="img-fluid">
+                    <img src="{{ asset('web/assets/images/KT88 White.png') }}" class="img-fluid">
                 </div>
                 <style>
-                    .logo-image {
+                    .logo-image { 
                         width: 100px;
                         height: 50px;
-                        border-radius: 1%;
+                        border-radius: 10%;
                         overflow: hidden;
-                        margin-top: -6px;
+                        margin-top: 9px;
                     }
                 </style>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -186,20 +190,21 @@
     <!-- Additional Scripts -->
     <script src="{{ url('web/assets/js/custom.js') }}"></script>
     <script src="{{ url('web/assets/js/owl.js') }}"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
 
     <!-- Bootstrap core JavaScript -->
 
-    {{-- <script src="{{ url('cyborg/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ url('cyborg/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    {{-- {{-- <script src="{{ url('cyborg/vendor/jquery/jquery.min.js') }}"></script> --}}
+  {{-- <script src="{{ url('cyborg/vendor/bootstrap/js/bootstrap.min.js') }}"></script> --}}
 
-  <script src="{{ url('cyborg/assets/js/isotope.min.js') }}"></script>
-  <script src="{{ url('cyborg/assets/js/owl-carousel.js') }}"></script>
-  <script src="{{ url('cyborg/assets/js/tabs.js') }}"></script>
-  <script src="{{ url('cyborg/assets/js/popup.js') }}"></script>
-  <script src="{{ url('cyborg/assets/js/custom.js') }}"></script> --}}
+  {{-- <script src="{{ url('cyborg/assets/js/isotope.min.js') }}"></script> --}}
+  {{-- <script src="{{ url('cyborg/assets/js/owl-carousel.js') }}"></script> --}}
+  {{-- <script src="{{ url('cyborg/assets/js/tabs.js') }}"></script> --}}
+  {{-- <script src="{{ url('cyborg/assets/js/popup.js') }}"></script> --}}
+  {{-- <script src="{{ url('cyborg/assets/js/custom.js') }}"></script>  --}}
     @yield('script')
 
 </body>
