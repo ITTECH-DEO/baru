@@ -50,7 +50,7 @@
                                     <td>{{$no}}</td>
                                     <td>{{$car->code_transaction}}</td>
                                     <td>{{$car->user->name}}</td>
-                                    <td>{{$car->car->name_car}}</td>
+                                    <td>{{$car->car->name_car }}</td>
                                     <td>{{number_format($car->amount)}}</td>
                                     <td>{{$car->transaction_date}}</td>
                                     <td>

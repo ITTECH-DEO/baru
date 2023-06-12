@@ -12,11 +12,18 @@
             transform: matrix(-1, 0, 0, 1, 0, 0);
         }
     </style>
+    <style>
+        .mb-4{
+            font-family: 'Bayon';
+        }
+
+    </style>
 @endsection
 
 @section("content")
+
 <!-- Banner Here -->
-<div class="row">
+{{-- <div class="row">
     <div class="col-md-12">
         <div class="p-3" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
             <div class="text-center">
@@ -28,12 +35,17 @@
         </div>
         <img src="{{url($bannercontact->image)}}" style='height: 500px; width: 100%; object-fit: cover' alt="">
     </div>
-</div>
+</div> --}}
 
 
 
 
 {{--<section class="ftco-section">--}}
+    <br>
+    <br>
+    <br>
+   
+    
     <div class="container">
 {{--        <div class="row justify-content-center">--}}
 {{--            <div class="col-md-6 text-center mb-5">--}}
@@ -53,7 +65,7 @@
                                     <thead>
                                         <tr>
                                             <th>Nama Cabang</th>
-                                            <th>Nomer Wa</th>
+                                            <th>NOMOR WA</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -95,7 +107,7 @@
                                 </div>
                                 <div class="text">
                                     @foreach ($admin as $adm )
-                                    <p><span>Phone:</span> <a href="https://wa.me/62{{$adm->phone_number}}">{{ $adm->phone_number }}</a></p>
+                                    <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone:</span> <a href="https://wa.me/62{{$adm->phone_number}}">{{ $adm->phone_number }}</a></p>
                                     @endforeach
                                 </div>
                             </div>
@@ -103,10 +115,10 @@
                         <div class="col-md-3">
                             <div class="dbox w-100 text-center">
                                 <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-paper-plane"></span>
+                                    <span class="fa fa-instagram"></span>
                                 </div>
                                 <div class="text">
-                                    <p><span>Instagram:</span> <a href="https://www.instagram.com/kt88cars/">kt88cars</a></p>
+                                    <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instagram:</span> <a href="https://www.instagram.com/kt88cars/">kt88cars</a></p>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +128,7 @@
                                     <span class="fa fa-globe"></span>
                                 </div>
                                 <div class="text">
-                                    <p><span>Website</span> <a href="kt88cars.com/homepage">kt88cars.com</a></p>
+                                    <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Website</span> <a href="kt88cars.com/homepage">kt88cars.com</a></p>
                                 </div>
                             </div>
                         </div>

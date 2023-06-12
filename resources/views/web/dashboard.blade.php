@@ -3,13 +3,13 @@
 @section('style')
     <style>
         .harga-responsive {
-            font-size: 1.6em;
+            font-size: 1.6vw;
             font-weight: bold;
         }
 
         @media (max-width: 500px) {
             .harga-responsive {
-                font-size: 0.95em;
+                font-size: 3vw;
                 font-weight: bold;
             }
 
@@ -22,16 +22,24 @@
         }
 
         .btn-square-md {
-            width: 800px !important;
-            max-width: 100% !important;
-            max-height: 100% !important;
-            height: 100px !important;
-            text-align: center;
-            padding: 0px;
-            font-size: 30px !important;
-            color: white !important;
-            background-color: #F15006 !important;
-            border-radius: 50px !important;
+    background-color: #F15006 !important;
+    border: none !important;
+    color: white !important;
+    padding: 1px 30px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 30px !important;
+    margin: 4px 2px !important;
+    cursor: pointer !important;
+    -webkit-transition-duration: 0.3s !important;
+    transition-duration: 03s !important;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+    border-radius: 40px !important;
+    position: absolute !important;
+    right: 38% !important;
+    bottom: 100px !important;
+    font-family: 'Bayon';font-size: 22px;
         }
 
         .judul {
@@ -89,8 +97,7 @@
                 @foreach ($banner as $b)
                     <div class="banner-item" style="background-image: url({{ asset($b->image) }});">
                         <div class="text-content">
-                            <h2 class="judul">KT88 CARS !</h2>
-                            <button type="button" class="btn btn-secondary btn-square-md">Find your car today!</button>
+                            <button type="button" class="btn btn-secondary btn-square-md">Find your car today !</button>
                         </div>
                     </div>
                 @endforeach
@@ -216,7 +223,7 @@
                 </div>
                 @foreach ($matic as $car)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-6 ">
-                        <div class="product-item p-2 shadow rounded">
+                        <div class="product-item p-2 shadow rounded down-content">
                             <a href="{{ route('car.detail', ['id' => $car['id']]) }}"><img class="rounded-lg"
                                     src="{{ url($car->img_car) }}" alt="NGeng Ngeng1"></a>
                             <div class="down-content">
@@ -226,7 +233,7 @@
                                 @php
                                     $hasil_rupiah = 'Rp ' . number_format($car->day_price, 2, ',', '.');
                                 @endphp
-                                <h6> {{ $hasil_rupiah }}</h6>
+                                <p class="harga-responsive"> {{ $hasil_rupiah }}</p>
 
                                 <p>{{ $car->power }} &nbsp;/&nbsp; {{ $car->fuel }} &nbsp;/&nbsp;
                                     {{ $car->tahun }} &nbsp;</p>
@@ -273,7 +280,7 @@
                                 @php
                                     $hasil_rupiah = 'Rp ' . number_format($car->day_price, 2, ',', '.');
                                 @endphp
-                                <h6> {{ $hasil_rupiah }}</h6>
+                                <p class="harga-responsive"> {{ $hasil_rupiah }}</p>
 
                                 <p>{{ $car->power }} &nbsp;/&nbsp; {{ $car->fuel }} &nbsp;/&nbsp;
                                     {{ $car->tahun }} &nbsp;</p>

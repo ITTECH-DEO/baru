@@ -1,6 +1,29 @@
 @extends('web.waras')
 
 @section("content")
+
+<style>
+  .btn-square-md {
+    background-color: #F15006 !important;
+    border: none !important;
+    color: white !important;
+    padding: 1px 30px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 30px !important;
+    margin: 4px 2px !important;
+    cursor: pointer !important;
+    -webkit-transition-duration: 0.3s !important;
+    transition-duration: 03s !important;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+    border-radius: 40px !important;
+    position: absolute !important;
+    right: 35% !important;
+    bottom: 50px !important;
+    font-family: 'Bayon';font-size: 22px;
+        }
+</style>
 <!-- Banner Here -->
 
 
@@ -22,7 +45,11 @@
 
 <div class="row">
     <div class="col-md-12">
-        <div class="p-3" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);"><h1 class="display-3 p-3 text-white" style="background-color: black">About Us</h1></div>
+        
+          <div class="text-content">
+            <button type="button" class="btn btn-secondary btn-square-md">Find your car today !</button>
+        </div>
+    
         <img src="{{url($banneraboutus->image)}}" style='height: 500px; width: 100%; object-fit: cover' alt="">
     </div>
 </div>

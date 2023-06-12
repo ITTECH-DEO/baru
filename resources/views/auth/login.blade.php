@@ -67,7 +67,7 @@
                 <li class="nav-item"><a class="nav-link" href="/aboutUs">About Us</a></li>
                 
                 <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
-
+                                
                 @auth
                  <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Logout</a>
@@ -116,6 +116,14 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
+              @if (\Session::has('msg'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('msg') !!}</li>
+        </ul>
+    </div>
+@endif
+              
               <h2>Login for order now!</h2>
             </div>
           </div>

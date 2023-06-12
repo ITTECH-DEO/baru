@@ -113,12 +113,12 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Car Name</label>
-                                    <input required class="form-control" name="name_car">
+                                    <input class="form-control" name="name_car">
                                 </div>
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-6">
                                     <label>Doors</label>
-                                    <input required class="form-control" name="doors" type="number">
-                                </div>
+                                    <input class="form-control" name="doors" type="number">
+                                </div> --}}
                             </div>
 
                             <div class="row">
@@ -163,64 +163,68 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-md-12">
                                     <label>Seats</label>
-                                    <input required class="form-control" name="seats">
+                                    <input  class="form-control" name="seats">
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label>Tahun</label>
-                                    <input required class="form-control" name="tahun">
-                                </div>
-                            </div>
+                            </div> --}}
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Model</label>
-                                    <input required type="text" class="form-control" name="model">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label>First Registration</label>
-                                    <input required type="date" class="form-control" name="fisrt_registartion">
+                                    <input type="text" class="form-control" name="model">
                                 </div>
                             </div>
+
+                                {{-- <div class="col-md-6">
+                                    <label>First Registration</label>
+                                    <input type="date" class="form-control" name="fisrt_registartion">
+                                </div>
+                            </div> --}}
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Millage</label>
-                                    <input required type="text" class="form-control" name="millage">
+                                    <input type="text" class="form-control" name="millage">
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Type Of Millage</label>
+                                    <select style="width: 100%" class="form-control js-example-basic-single"
+                                        name="mils">
+                                        <option value="0">Choose Millage</option>
+                                        <option value="Mils">Mils</option>
+                                        <option value="Km">Kilometer</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label>Fuel</label>
-                                    <input required type="text" class="form-control" name="fuel">
+                                    <input type="text" class="form-control" name="fuel">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Egine Size</label>
-                                    <input required type="text" class="form-control" name="engine_size">
+                                    <label>Engine Size</label>
+                                    <input type="text" class="form-control" name="engine_size">
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label>Power</label>
-                                    <input required type="text" class="form-control" name="power">
+                                    <label>Tahun</label>
+                                    <input class="form-control" name="tahun">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Color</label>
-                                    <input required type="text" class="form-control" name="color">
+                                    <input type="text" class="form-control" name="color">
                                 </div>
 
                                 <div class="col-md-6">
                                     <label>Price</label>
-                                    <input required type="text" class="form-control" name="day_price">
+                                    <input type="text" class="form-control" name="day_price">
                                 </div>
                             </div>
                             <br>
@@ -416,11 +420,12 @@
                                         <input required class="form-control" value="{{ $car->name_car }}"
                                             name="name_car" placeholder="Car Name">
                                     </div>
-                                    <div class="col-md-6">
-                                        <label>Doors</label>
-                                        <input required class="form-control" name="doors" placeholder="Doors"  type="number" value="{{ $car->doors }}">
-                                    </div>
                                 </div>
+                                    {{-- <div class="col-md-6">
+                                        <label>Doors</label>
+                                        <input  class="form-control" name="doors" placeholder="Doors"  type="number" value="{{ $car->doors }}">
+                                    </div>
+                                </div> --}}
 
                                 <div class="row">
                                     <div class="col-md-3">
@@ -471,39 +476,40 @@
                                         </select>
                                     </div>
                                 </div>
-
+{{-- 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <label>Seats</label>
                                         <input required class="form-control" name="seats" placeholder="Seats"
                                             value="{{ $car->seats }}">
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Model</label>
-                                        <input required type="text" class="form-control" value="{{ $car->model }}"
+                                        <input  type="text" class="form-control" value="{{ $car->model }}"
                                             name="model">
                                     </div>
+                                </div>
 
-                                    <div class="col-md-6">
+                                    {{-- <div class="col-md-6">
                                         <label>First Registration</label>
-                                        <input required type="date" class="form-control"
+                                        <input type="date" class="form-control"
                                             value="{{ $car->fisrt_registartion }}" name="fisrt_registartion">
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Millage</label>
-                                        <input required type="text" class="form-control" value="{{ $car->millage }}"
+                                        <input type="text" class="form-control" value="{{ $car->millage }}"
                                             name="millage">
                                     </div>
 
                                     <div class="col-md-6">
                                         <label>Fuel</label>
-                                        <input required type="text" class="form-control" value="{{ $car->fuel }}"
+                                        <input type="text" class="form-control" value="{{ $car->fuel }}"
                                             name="fuel">
                                     </div>
                                 </div>
@@ -511,27 +517,27 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Egine Size</label>
-                                        <input required type="text" class="form-control"
+                                        <input type="text" class="form-control"
                                             value="{{ $car->engine_size }}" name="engine_size">
                                     </div>
 
-                                    <div class="col-md-6">
+                                    {{-- <div class="col-md-6">
                                         <label>Power</label>
-                                        <input required type="text" class="form-control" value="{{ $car->power }}"
+                                        <input type="text" class="form-control" value="{{ $car->power }}"
                                             name="power">
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Color</label>
-                                        <input required type="text" class="form-control" value="{{ $car->color }}"
+                                        <input type="text" class="form-control" value="{{ $car->color }}"
                                             name="color">
                                     </div>
 
                                     <div class="col-md-6">
                                         <label>Price</label>
-                                        <input required type="text" class="form-control"
+                                        <input type="text" class="form-control"
                                             value="{{ $car->day_price }}" name="day_price">
                                     </div>
                                 </div>
@@ -693,14 +699,14 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                {{-- <li class="list-group-item">
                                                     <div class="clearfix">
                                                         <span class="pull-left">First registration</span>
 
                                                         <strong
                                                             class="pull-right">{{ strtoupper($car->fisrt_registartion) }}</strong>
                                                     </div>
-                                                </li>
+                                                </li> --}}
 
                                                 <li class="list-group-item">
                                                     <div class="clearfix">
@@ -728,13 +734,13 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                {{-- <li class="list-group-item">
                                                     <div class="clearfix">
                                                         <span class="pull-left">Power</span>
 
                                                         <strong class="pull-right">{{ strtoupper($car->power) }}</strong>
                                                     </div>
-                                                </li>
+                                                </li> --}}
 
                                                 <li class="list-group-item">
                                                     <div class="clearfix">

@@ -29,6 +29,8 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+        <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+
 
     @yield('style')
 
@@ -79,8 +81,16 @@
                         <li class="nav-item {{ Request::is('contact*') ? 'active' : '' }}"><a class="nav-link"
                                 href="/contact">Contact Us</a></li>
 
-                        <li class="nav-item {{ Request::is('login*') ? 'active' : '' }}"><a class="nav-link"
-                                href="/login">Login</a></li>
+                                @auth
+                                <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">Logout</a>
+                                    <form id="logout-form" action="{{ url('log_out_customer') }}"
+                                     method="POST" style="display: none;">@csrf </form></li>
+                               @endauth
+                               @guest
+                               <li class="nav-item"><a class="nav-link" href="{{url('login')}}">Login/Register</a></li>
+                               @endguest
+                           </ul>
                     </ul>
                 </div>
             </div>

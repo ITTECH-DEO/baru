@@ -55,7 +55,7 @@
                                 @foreach ($banners as $bnt)
                                     <tr>
                                         <td>{{ $no }}</td>
-                                        <td><img src="{{ asset($bnt->image) }}" style="width: 100px; height: 50px;"
+                                        <td><img src="{{ asset($bnt->image) }}" style="max-width: 1366px; height: 50px;"
                                                 alt=""></td>
                                         <td>
                                             {{-- <button class="btn btn-info btn-sm" data-toggle="modal"

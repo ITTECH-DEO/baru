@@ -8267,7 +8267,9 @@ footer {
   .footer-09 .footer-heading {
     color: #fff;
     font-size: 22px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    font-family: 'Bayon';
+  }
     .footer-09 .footer-heading .icon {
       width: 40px;
       margin-right: 10px;

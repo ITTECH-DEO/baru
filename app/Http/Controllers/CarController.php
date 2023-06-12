@@ -157,6 +157,7 @@ class CarController extends Controller
         $car->status_id = $request->status;
         $car->whatsapp_id = $request->whatsapp;
         $car->description = $request->description;
+        $car->mils = $request->mils;
         $car->save();
         return redirect('cars')
             ->with('success', 'Data car successfully added!');
@@ -173,8 +174,8 @@ class CarController extends Controller
         $img_car_file4 = $request->file('img_car4');
         $img_car4 = 'img_car4';
 
-        $img_car_file_lainnya = $request->file('img_car_lainnya');
-        $img_car_lainnya = 'img_car_lainnya';
+        $img_car_file_lainnya = $request->file('img_car_lainnya1');
+        $img_car_lainnya1 = 'img_car_lainnya1';
         $img_car_file_lainnya2 = $request->file('img_car_lainnya2');
         $img_car_lainnya2 = 'img_car_lainnya2';
         $img_car_file_lainnya3 = $request->file('img_car_lainnya3');
@@ -209,15 +210,15 @@ class CarController extends Controller
             $car->img_car4 = $request->old_img_car4;
         }
         if ($img_car_file_lainnya != null) {
-            if ($request->hasFile('img_car_lainnya')) {
-                $file = $request->file('img_car_lainnya');
+            if ($request->hasFile('img_car_lainnya1')) {
+                $file = $request->file('img_car_lainnya1');
                 $ext = $file->getClientOriginalName();
                 $tmp_file_path = "admin/images/cars/";
                 $file->move('admin/images/cars', $ext);
-                $car->img_car_lainnya = $tmp_file_path.$ext;
+                $car->img_car_lainnya1 = $tmp_file_path.$ext;
             }
         } else {
-            $car->img_car_lainnya = $request->old_img_car_lainnya;
+            $car->img_car_lainnya1 = $request->old_img_car_lainnya1;
         }
         if ($img_car_file_lainnya2 != null) {
             if ($request->hasFile('img_car_lainnya2')) {

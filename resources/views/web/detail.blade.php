@@ -176,8 +176,8 @@
                            <li class="list-group-item">
                                <div class="clearfix">
                                    <span class="pull-left">Mileage</span>
-
                                    <strong class="pull-right">{{ strtoupper($car->millage) }}</strong>
+                                   <strong class="pull-right">{{ strtoupper($car->mils) }}</strong>
                                </div>
                            </li>
 

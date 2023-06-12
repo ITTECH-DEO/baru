@@ -73,7 +73,7 @@ Route::get('/about_delete/{id}', [AboutUsController::class, 'delete'])->middlewa
 Route::post('/about_add', [AboutUsController::class, 'create'])->middleware('checkRole:admin')->middleware('checkRole:admin');
 Route::post('/about_update/{id}', [AboutUsController::class, 'update'])->middleware('checkRole:admin')->middleware('checkRole:admin');
 //web
-Route::get('homepage', [WebController::class, 'index']);
+Route::get('homepage', [DashboardController::class, 'index']);
 Route::get('car_detail/{id}', [WebController::class, 'detailCar'])->name('car.detail');
 Route::post('/car_search', [WebController::class, 'searchCar']);
 Route::post('/register_customer', [WebController::class, 'registCustomer']);

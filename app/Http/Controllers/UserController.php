@@ -33,7 +33,7 @@ class UserController extends Controller
     public function log_out_customer(Request $request)
     {
         Auth::logout();
-        return redirect('homepage');
+        return redirect('/');
     }
 
     public function indexAdmin()

@@ -11,6 +11,9 @@ use App\Models\User;
 use Session;
 use DB;
 use Auth;
+
+
+
 class WebController extends Controller
 {
     /**
@@ -47,6 +50,7 @@ class WebController extends Controller
     //   }
     public function registCustomer(Request $request)
     {
+        try{
         $User = new User;
         $User->role = 'customer';
         $User->name = $request->name;
@@ -57,7 +61,17 @@ class WebController extends Controller
         $User->save();
         $login = User::where('id',$User->id)->first();
         Auth::login($login);
-        return redirect('homepage');
+        return redirect('/');
+        }catch(\Illuminate\Database\QueryException $e){
+            $errorCode = $e->errorInfo[1];
+            if($errorCode == '1062'){
+                session()->flash('msg', 'Data Anda sudah terdaftarkan');
+                return redirect()->back();
+            }
+                
+            
+        }
+             
     }
 
 
